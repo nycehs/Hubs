@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <!--
 NOTES:
-This version is designed for rapid toggling of Hub pages. Each is a Bootstrap tab.
-This is only feasible if we add Javacript that allows for DEEP LINKING.
+NOW WITH DEEP LINKING ENABLED!
 -->
 
 <html lang="en" dir="ltr">
@@ -216,24 +215,24 @@ This is only feasible if we add Javacript that allows for DEEP LINKING.
                     <h2>Data Explorer</h2>
                     <hr>
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-outdoor-tab" data-toggle="pill" href="#v-pills-outdoor" role="tab" aria-controls="v-pills-outdoor" aria-selected="true">Outdoor air</a>
+                    <a class="nav-link active tab-link" id="outdoor-tab" data-toggle="pill" href="#outdoor" role="tab" aria-controls="outdoor" aria-selected="true">Outdoor air</a>
                    
-                    <a class="nav-link" id="v-pills-housing-tab" data-toggle="pill" href="#v-pills-housing" role="tab" aria-controls="v-pills-housing" aria-selected="false">Housing</a>
+                    <a class="nav-link tab-link" id="housing-tab" data-toggle="pill" href="#housing" role="tab" aria-controls="housing" aria-selected="false">Housing</a>
                    
-                    <a class="nav-link" id="v-pills-climate-tab" data-toggle="pill" href="#v-pills-climate" role="tab" aria-controls="v-pills-climate" aria-selected="false">Climate</a>
+                    <a class="nav-link tab-link" id="climate-tab" data-toggle="pill" href="#climate" role="tab" aria-controls="climate" aria-selected="false">Climate</a>
                    
-                    <a class="nav-link" id="v-pills-transportation-tab" data-toggle="pill" href="#v-pills-transportation" role="tab" aria-controls="v-pills-transportation" aria-selected="false">Transportation</a>
+                    <a class="nav-link tab-link" id="transportation-tab" data-toggle="pill" href="#transportation" role="tab" aria-controls="transportation" aria-selected="false">Transportation</a>
 
-                    <a class="nav-link" id="v-pills-food-tab" data-toggle="pill" href="#v-pills-food" role="tab" aria-controls="v-pills-food" aria-selected="true">Food</a>
+                    <a class="nav-link tab-link" id="food-tab" data-toggle="pill" href="#food" role="tab" aria-controls="food" aria-selected="true">Food</a>
                    
-                    <a class="nav-link" id="v-pills-pests-tab" data-toggle="pill" href="#v-pills-pests" role="tab" aria-controls="v-pills-pests" aria-selected="false">Pests</a>
+                    <a class="nav-link tab-link" id="pests-tab" data-toggle="pill" href="#pests" role="tab" aria-controls="pests" aria-selected="false">Pests</a>
                     <div class="border-bottom"></div>
                    
-                    <a class="nav-link" id="v-pills-special-tab" data-toggle="pill" href="#v-pills-special" role="tab" aria-controls="v-pills-special" aria-selected="false">Special populations</a>
+                    <a class="nav-link tab-link" id="special-tab" data-toggle="pill" href="#special" role="tab" aria-controls="special" aria-selected="false">Special populations</a>
                    
-                    <a class="nav-link" id="v-pills-child-tab" data-toggle="pill" href="#v-pills-child" role="tab" aria-controls="v-pills-child" aria-selected="false">Child health</a>
+                    <a class="nav-link tab-link" id="child-tab" data-toggle="pill" href="#child" role="tab" aria-controls="child" aria-selected="false">Child health</a>
 
-                    <a class="nav-link" id="v-pills-all-tab" data-toggle="pill" href="#v-pills-all" role="tab" aria-controls="v-pills-all" aria-selected="false">All health outcomes</a>
+                    <a class="nav-link tab-link" id="all-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all" aria-selected="false">All health outcomes</a>
                     <div class="border-bottom mb-2"></div>
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Search topics">
                     <br>
@@ -242,7 +241,7 @@ This is only feasible if we add Javacript that allows for DEEP LINKING.
                 </div>
                 <div class="col-9">
                   <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-outdoor" role="tabpanel" aria-labelledby="v-pills-outdoor-tab">
+                    <div class="tab-pane fade show active" id="outdoor" role="tabpanel" aria-labelledby="outdoor-tab">
                             <div class="row">
                                     <div class="col">
                                         <h3>Outdoor Air Quality: the NYC air quality data hub</h3>
@@ -376,7 +375,7 @@ This is only feasible if we add Javacript that allows for DEEP LINKING.
                     </div>
                    
                    
-                    <div class="tab-pane fade" id="v-pills-housing" role="tabpanel" aria-labelledby="v-pills-housing-tab">
+                    <div class="tab-pane fade" id="housing" role="tabpanel" aria-labelledby="housing-tab">
                             <div class="row">
                                     <div class="col"><h3>Housing</h3>
                                       <p>Most people spend most of their time at home - so the household environment can significantly affect health. Disrepair that stems from longterm maintenance neglect can lead to serious health problems, including: lead poisoning from lead paint; asthma and other respiratory issues triggered by pests; and carbon monoxide poisoning.</p>
@@ -484,7 +483,7 @@ This is only feasible if we add Javacript that allows for DEEP LINKING.
                                 </div>
                     </div>
                     
-                    <div class="tab-pane fade" id="v-pills-transportation" role="tabpanel" aria-labelledby="v-pills-transportation-tab">
+                    <div class="tab-pane fade" id="transportation" role="tabpanel" aria-labelledby="transportation-tab">
                         <div class="row">
                             <div class="col"><h3>Transportation and active design</h3>
                                 <p>Physical inactivity and unhealthy diet rank among the leading risk factors for premature death in the United States. Active design, however, promotes health by using architectural and urban design strategies to encourage walking, bicycling, stair climbing, transit use, active recreation, and healthy eating.</p>
@@ -585,7 +584,7 @@ This is only feasible if we add Javacript that allows for DEEP LINKING.
                         </div>
                     </div>
                     
-                    <div class="tab-pane fade" id="v-pills-climate" role="tabpanel" aria-labelledby="v-pills-climate-tab">
+                    <div class="tab-pane fade" id="climate" role="tabpanel" aria-labelledby="climate-tab">
                         <div class="row">
                             <div class="col"><h3>Climate, weather, and health</h3>
                                 <p>NYC's climate is changing along with the world's climate. We expect more frequent and intense heat waves and increased rainfall, precipitation, and coastal storms. These will add to existing weather-related risks. Already, heat kills more people than all other natural disasters combined.</p>
@@ -680,7 +679,7 @@ This is only feasible if we add Javacript that allows for DEEP LINKING.
                         </div>
                     </div>
                     
-                    <div class="tab-pane fade" id="v-pills-food" role="tabpanel" aria-labelledby="v-pills-food-tab">
+                    <div class="tab-pane fade" id="food" role="tabpanel" aria-labelledby="food-tab">
                             <div class="row">
                                     <div class="col"><h3>Food and drink</h3>
                                         <p>We all make choices around food and drink, but sometimes, those choices are made for us by our food environments. </p>
@@ -758,7 +757,7 @@ This is only feasible if we add Javacript that allows for DEEP LINKING.
 
                     </div>
                     
-                    <div class="tab-pane fade" id="v-pills-pests" role="tabpanel" aria-labelledby="v-pills-pests-tab">
+                    <div class="tab-pane fade" id="pests" role="tabpanel" aria-labelledby="pests-tab">
                             <div class="row">
                                     <div class="col"><h3>Pests and pesticides</h3>
                                         <p>Pests and pesticides can both have health effects. Household pests like mice, rats, and cockroaches can trigger asthma, while bed bugs are a well-known nuisance. Meanwhile, warmer winters may mean more vector-borne diseases like babesiosis and west nile virus.</p>
@@ -838,11 +837,11 @@ This is only feasible if we add Javacript that allows for DEEP LINKING.
                                 </div>
                     </div>
                     
-                    <div class="tab-pane fade" id="v-pills-special" role="tabpanel" aria-labelledby="v-pills-special-tab"> special pops...</div>
+                    <div class="tab-pane fade" id="special" role="tabpanel" aria-labelledby="special-tab"> special pops...</div>
                     
-                    <div class="tab-pane fade" id="v-pills-child" role="tabpanel" aria-labelledby="v-pills-child-tab">..child.</div>
+                    <div class="tab-pane fade" id="child" role="tabpanel" aria-labelledby="child-tab">..child.</div>
                     
-                    <div class="tab-pane fade" id="v-pills-all" role="tabpanel" aria-labelledby="v-pills-all-tab">..all HOs.</div>  
+                    <div class="tab-pane fade" id="all" role="tabpanel" aria-labelledby="all-tab">..all HOs.</div>  
                 </div>
                 </div>
               </div>
@@ -1078,6 +1077,24 @@ This is only feasible if we add Javacript that allows for DEEP LINKING.
       $('#theModal').modal('show').find('.modal-content').load($(this).attr('href'));
     });
   </script>
+
+  <!-- this script enables deep linking-->
+<script>
+$(document).ready(() => {
+  var url = window.location.href;
+  if (url.indexOf("#") > 0){
+  var activeTab = url.substring(url.indexOf("#") + 1);
+    $('.nav[role="tablist"] a[href="#'+activeTab+'"]').tab('show');
+  }
+
+  $('a[role="tab"]').on("click", function() {
+    var newUrl;
+    const hash = $(this).attr("href");
+      newUrl = url.split("#")[0] + hash;
+    history.replaceState(null, null, newUrl);
+  });
+});
+</script>
 
 
 </body>
