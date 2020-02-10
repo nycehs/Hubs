@@ -30,7 +30,13 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
     <!--Custom additions for Portal items-->
     <link rel="stylesheet" href="https://nycehs.github.io/Portal-Core-Repo/css/custom.css">
 
-    
+<style>
+/*This CSS controls read more/show less toggle.*/
+[aria-expanded="false"] > .expanded,
+[aria-expanded="true"] > .collapsed {
+  display: none;
+}
+</style>
 
 
 </head>
@@ -171,16 +177,16 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                             <div class="dropdown-menu" aria-labelledby="nav-item-03">
     
                                 <ul class="extensible-list">
-                                    <li><a href="/Data/Outdoor.html">Outdoor Air</a></li>
-                                    <li><a href="#">Housing</a></li>
-                                    <li><a href="#">Climate</a></li>
-                                    <li><a href="#">Transportation</a></li>
-                                    <li><a href="#">Food</a></li>
-                                    <li><a href="#">Pests</a></li>
+                                    <li><a href="DataExplorerHub.html#outdoor">Outdoor Air</a></li>
+                                    <li><a href="DataExplorerHub.html#housing">Housing</a></li>
+                                    <li><a href="DataExplorerHub.html#climate">Climate</a></li>
+                                    <li><a href="DataExplorerHub.html#transportation">Transportation</a></li>
+                                    <li><a href="DataExplorerHub.html#food">Food</a></li>
+                                    <li><a href="DataExplorerHub.html#pests">Pests</a></li>
                                     <hr>
-                                    <li><a href="#">Special populations</a></li>
-                                    <li><a href="">Child health</a></li>
-                                    <li><a href="">All health outcomes</a></li>
+                                    <li><a href="DataExplorerHub.html#special">Special populations</a></li>
+                                    <li><a href="DataExplorerHub.html#child">Child health</a></li>
+                                    <li><a href="DataExplorerHub.html#all">All health outcomes</a></li>
                                 </ul>
     
                             </div>   
@@ -211,48 +217,32 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
 
     <main id="skip-header-target" role="main" style="background-color:#f8f9fa;">
        
-            <div class="container-fluid fs-sm">
-                <div class="row">
-                 
-
-                        <!--start primary window-->
-                        <div class="col" id="primary-content">
-                                <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="DataExplorerHubAir.html">Outdoor Air
-                                            </a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Asthma</li>
-            
-                                        </ol>
+            <div class="container fs-sm">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="Index.html">Portal Home</a></li>
+                        <li class="breadcrumb-item"><a href="DataExplorerHub.html">Data Explorer
+                        </a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Asthma</li>
+                            </ol>
                     
-                                    </nav>
-                          <div class="row my-2">
-                              <div class="col"><h3>Asthma</h3>
-                            
-                                <div class="d-lg-none">
-                                        <div class="btn-toggle">
-                                        <button class="btn btn-block btn-md btn-light" data-toggle="collapse" data-target="#topicdescription" aria-expanded="false" aria-controls="topicdescription">
-                                            <span class="title">About asthma</span>
-                                        </button>
-                                        </div>
-                                    </div>
-                            </div>
-                          </div>
+                </nav>
+                        
+                <!--start primary window-->
+                <div id="primary-content">
+                    <h2>Asthma</h2>
 
-                          <div class="row my-2">
-                              <div class="col-xl-5 col-lg-5">
-                                <div class="collapse d-lg-block" id="topicdescription">
-                                <div class="card">
-
-                                
-                                    <div class="card-body">
-                                        
-                                            <p>Asthma is a common disease in which the lungs become swollen, making breathing difficult. Symptoms include wheezing, coughing, shortness of breath and tightness in the chest. The exact causes of asthma are not known. Asthma cannot be cured, but it can be controlled. </p>
-
+                    <div class="row">
+                        <div class="col-lg-8 col-sm-12">
+                                <div class="card mb-2">
+                                        <div class="card-header bg-light"> <i class="fas fa-info-circle"></i>&nbsp;About asthma</div>
+                                        <div class="card-body"><p>Asthma is a common disease in which the lungs become swollen, making breathing difficult. Symptoms include wheezing, coughing, shortness of breath and tightness in the chest. The exact causes of asthma are not known. Asthma cannot be cured, but it can be controlled. </p>
+                
+                                            <div class="collapse" id="block-id">
                                             <p>Asthma is a leading cause of emergency room visits, hospitalizations and missed school days in New York City's poorest neighborhoods. In NYC, asthma is more common among low-income Black and Latino children.  </p>
-            
+                
                                             <b>Asthma and the environment</b>
-            
+                
                                             <p>Certain things in the environment can trigger an asthma attack or make symptoms worse. Common triggers include: 
                                                 <ul>
                                                     <li>Tobacco smoke</li>
@@ -279,161 +269,237 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                                             </li>
                                                         <li>Pest proof your home. If building conditions may be attracting pests, contact your landlord. If your landlord does not addres your concerns, call 311. </li>
                                                     </ul>
-                                                    </p>
+                                                    </p></div>
+                                                    <div class="float-right">
+                                                    <a href="#block-id" data-toggle="collapse" aria-expanded="false" aria-controls="block-id"><span class="collapsed">Read more...</span><span class="expanded">Show less.</span></a> </div>
+                                                </div>
                                     </div>
-                        
-                                
-                        
-                            </div>
-                            <div class="accordion-group my-1" role="tablist" id="accordion-01">
-    
-                                <div class="card">
-                            
-                                    <a class="card-header collapse collapsed" id="acc-button-01" data-toggle="collapse" href="#panel-acc-button-01"  role="tab" aria-expanded="false" aria-controls="panel-acc-button-01">
-                                        <span class="title" role="heading" aria-level="3">More information</span>
-                                    </a>
-                            
-                                    <div class="collapse" id="panel-acc-button-01" role="tabpanel" aria-labelledby="acc-button-01" data-parent="#accordion-01">
-                            
-                                        <div class="card-body">
-                                                <ul><li><a href="http://www.aaaai.org/home.aspx" content="http://www.aaaai.org/home.aspx" class="message_urls" target="_blank">American Academy  of Allergy and Immunology</a></li><li><a href="http://www.healthyschools.org/links.html" content="http://www.healthyschools.org/links.html" class="message_urls" target="_blank">Healthy Schools Network, Inc.</a></li><li><a href="http://www.airnow.gov/" content="http://www.airnow.gov/" class="message_urls" target="_blank">EPA AIRNow</a></li><li><a href="http://www.aafa.org/" content="http://www.aafa.org/" class="message_urls" target="_blank">Asthma and Allergy Foundation of America</a></li><li><a href="http://www.asthmacommunitynetwork.org/resources/conferences" content="http://www.asthmacommunitynetwork.org/resources/conferences" class="message_urls" target="_blank">Healthy Kids: The Key to Basics</a></li><li><a href="http://www.nhlbi.nih.gov/about/org/naepp/" content="http://www.nhlbi.nih.gov/about/org/naepp/" class="message_urls" target="_blank">National Asthma Education and Prevention Program</a></li><li><a href="http://www.lung.org" content="http://www.lung.org" class="message_urls" target="_blank">The American Lung Association </a></li><li><a href="https://www.schools.nyc.gov/docs/default-source/default-document-library/asthma-medication-administration-form-english" content="https://www.schools.nyc.gov/docs/default-source/default-document-library/asthma-medication-administration-form-english" class="message_urls" target="_blank">Asthma Medication Administration Form (AMAF) School Year 2018-19</a></li></ul>
-                                        </div>
-                            
-                                    </div>
-                                    <!-- .collapse -->
-                            
-                                </div>
-                                <!-- .card (end of first accordion, repeat as needed) -->
+                        </div>
 
-
-                            
-                            </div>
-                            </div>
-
-                            
-
-                              </div>
-
-                              <div class="col-lg-7">
-                                  <div class="row">
-                                      <div class="col">
-                                        <em>Choose indicator to display:</em>  
-                                        <div class="dropdown mb-2">
-                                            <button type="button" class="btn btn-md btn-outline-success dropdown-toggle btn-block" id="indicatordropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Asthma emergency department visits</button> 	
-                                            <div class="dropdown-menu" aria-labelledby="indicatordropdown">
-                                                    <a class="dropdown-item" href="#">Asthma ED visits</a>
-                                                    <a class="dropdown-item" href="#">Asthma hospitalizations</a>
-                                                    <a class="dropdown-item" href="#">Asthma prevalence</a>
-                                                  </div>
-                                                
+                        <div class="col-lg-4 col-sm-12">
+                                <div class="card mb-2">
+                                        <div class="card-header bg-light">
+                                         
+                                          Related topics</div>
+                                            
+                                            <div class="card-body">
+                                                   <ul>
+                                                       <li><a href="DataExplorerHub.html#outdoor">Outdoor air</a></li>
+                                                       <li><a href="DataExplorerHub.html#housing">Housing</a></li>
+                                                       <li><a href="DataExplorerHub.html#pests">Pests</a></li>
+                                                   </ul>
+                                                                                                                                
                                             </div>
+                                            </div>
+                        </div>
 
-                                            <div class="card mb-2">
-                                                    <div class="card-body"><b>Asthma ED visits</b> are an important measure of asthma, particularly for children age 5 to 17. It's triggered by several environmental conditions and there are notable racial and socioeconomic disparities.</div>
+
+
+
+                    </div>
+
+                    <div class="row my-4 border-top pt-2">
+                        <div class="col-12 mb-2">
+                                <strong>Choose indicator to display:</strong> 
+                        </div>
+                        <div class="col-lg-8 col-sm-12 mb-2">
+
+                                <div class="dropdown mb-2">
+                                    <button type="button" class="btn btn-md btn-outline-success dropdown-toggle btn-block" id="indicatordropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Asthma emergency department visits</button> 	
+                                    <div class="dropdown-menu" style="width: 100%;" aria-labelledby="indicatordropdown">
+                                            <a class="dropdown-item" href="#">Asthma ED visits</a>
+                                            <a class="dropdown-item" href="#">Asthma hospitalizations</a>
+                                            <a class="dropdown-item" href="#">Asthma prevalence</a>
+                                          </div>
+                                        
+                                    </div>
+
+                                    <b> <i class="fas fa-info-circle"></i>&nbsp;Asthma ED visits</b> are an important measure of asthma, particularly for children age 5 to 17. They're triggered by several environmental conditions and there are notable racial and socioeconomic disparities.   
+
+                                        
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                                <div class="btn-toggle">
+                                        <button class="btn btn-block btn-light" data-toggle="collapse" data-target="#toggle-target" aria-expanded="true" aria-controls="toggle-target">
+                                            <span class="title"><i class="fas fa-cog"></i>&nbsp;Refine data</span>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="collapse show bg-white p-2" id="toggle-target" role="navigation">
+                                    <b>Age:&nbsp;&nbsp;&nbsp;</b>
+                                                                                                    <div class="form-check form-check-inline">
+                                                                                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                                                                      <label class="form-check-label" for="inlineRadio1">0 to 4</label>
+                                                                                                    </div>
+                                                                                                    <div class="form-check form-check-inline">
+                                                                                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                                                                      <label class="form-check-label" for="inlineRadio2">5 to 17</label>
+                                                                                                    </div>
+                                                                                                    <div class="form-check form-check-inline">
+                                                                                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                                                                                      <label class="form-check-label" for="inlineRadio3">18+</label>
+                                                                                                    </div>
+                                      <br>
+                                                                                                    <b>Measure:&nbsp;&nbsp;&nbsp;</b>
+                                                                                                    <div class="form-check form-check-inline">
+                                                                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                                                                            <label class="form-check-label" for="inlineRadio1">Rate</label>
+                                                                                                          </div>
+                                                                                                          <div class="form-check form-check-inline">
+                                                                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                                                                            <label class="form-check-label" for="inlineRadio2">Count</label>
+                                                                                                          </div>    
+                                                                                                          <br>
+                                                                                                          <b>Geography:&nbsp;&nbsp;&nbsp;</b>
+                                                                                                          <div class="form-check form-check-inline">
+                                                                                                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                                                                                  <label class="form-check-label" for="inlineRadio1">Community district</label>
+                                                                                                                </div>
+                                                                                                                <div class="form-check form-check-inline">
+                                                                                                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                                                                                  <label class="form-check-label" for="inlineRadio2">NTA</label>
+                                                                                                                </div> 
+                                    </div>
+                        </div>
+                        
+                    </div>
+
+
+                        <div class="row my-4">
+                            <div class="col-lg-8 col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                                <div class="float-right"><a href="#"><i class="fas fa-cog"></i></a></div>
+                                                <i class="fas fa-chart-bar"></i>&nbsp;Summary</div>
+                                            <div class="card-body">
+                                            
+                                                
+                                <iframe title="" aria-label="Table" id="datawrapper-chart-r5ziK" src="https://datawrapper.dwcdn.net/r5ziK/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="844"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                
+                                            </div>
+                                        </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-8">
+                                Explanation colum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row my-4">
+                            <div class="col-lg-8 col-sm-12">
+                                    <div class="card">
+                                            <div class="card-header bg-light">
+                                                    <div class="float-right"><a href="#"><i class="fas fa-cog"></i></a></div>
+                                                    <i class="fas fa-map-marker-alt"></i>&nbsp;Map</div>
+
+                                            <div class="card-body">                                       
+                                                <iframe title="" aria-label="USA new york city neighborhoods (ntas) choropleth map" id="datawrapper-chart-52c6Y" src="https://datawrapper.dwcdn.net/52c6Y/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                
+                                            </div>
+                                        </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-8">
+                                    Explanation colum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                </div>
+
+                        </div>
+
+
+                        <div class="row my-4">
+                            <div class="col-lg-8 col-sm-12">
+                                    <div class="card">
+                                            <div class="card-header bg-light">
+                                                    <div class="float-right"><a href="#"><i class="fas fa-cog"></i></a></div>
+                                                    <i class="fas fa-chart-line"></i>&nbsp;Trend</div>
+
+                                            <div class="card-body">
+                                                <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-0JdfH" src="https://datawrapper.dwcdn.net/0JdfH/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-8">
+                                    Explanation colum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                </div>
+
+
+                        </div>
+
+
+                        <div class="row my-4">
+                                <div class="col-lg-8 col-sm-12">
+                                        <div class="card">
+                                                <div class="card-header bg-light">
+                                                        <div class="float-right"><a href="#"><i class="fas fa-cog"></i></a></div>
+                                                        <i class="fas fa-exclamation-circle"></i>&nbsp;Disparities</div>
+                                                <div class="card-body">
+
+                                                    <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-80S2v" src="https://datawrapper.dwcdn.net/80S2v/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                    
                                                 </div>
+                                            </div>
+                                </div>
+
+                                <div class="col-lg-4 col-sm-8">
+                                        Explanation colum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    </div>
+                        </div>
 
 
+                        <div class="row my-4">
+                                    <div class="col-lg-8 col-sm-12">
+                                            <div class="card">
+                                                <div class="card-header bg-light">
+                                                    <div class="float-right"><a href="#"><i class="fas fa-cog"></i></a></div>
+                                                    <i class="fas fa-link"></i>&nbsp;Connections</div>
+                                                    <div class="card-body">
 
-                                                    <p><em>Refine data</em> [<a href="">more options</a>]</p>
-<div class="clearfix">
-<div class="float-left">
-<b>Age:</b>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  <label class="form-check-label" for="inlineRadio1">0 to 4</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-  <label class="form-check-label" for="inlineRadio2">5 to 17</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-  <label class="form-check-label" for="inlineRadio3">Adults</label>
-</div>
-</div>
-
-<div class="float-right">
-<b>Measure:</b>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  <label class="form-check-label" for="inlineRadio1">Rate</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-  <label class="form-check-label" for="inlineRadio2">Count</label>
-</div>
-
-</div>
-
-
-</div>
-
-
-                                      </div>
-                                  </div>
-
-
-                                  <div class="row pt-2">
-                                      <div class="col-xl-12">
-                                            <div class="nav nav-pills device-sm" role="tablist">
-
-                                                    <a class="nav-item nav-link flex-fill active" id="tab-btn-01-a" href="#tab-01-a"
-                                                        data-toggle="pill" aria-controls="tab-01-a" aria-selected="true" role="tab">
-                                                        <i class="fas fa-chart-bar h4 fa-fw"></i><div class="d-none d-lg-block">Summary</div>
-                                                    </a>
-                                                
-                                                    <a class="nav-item nav-link flex-fill" id="tab-btn-01-b" href="#tab-01-b"
-                                                        data-toggle="pill" aria-controls="tab-01-b" aria-selected="false" role="tab">
-                                                        <i class="fas fa-map-marker-alt h4 fa-fw"></i><div class="d-none d-lg-block">Map</div>
-                                                    </a>
-                                                
-                                                    <a class="nav-item nav-link flex-fill" id="tab-btn-01-c" href="#tab-01-c"
-                                                        data-toggle="pill" aria-controls="tab-01-c" aria-selected="false" role="tab">
-                                                        <i class="fas fa-chart-line h4 fa-fw"></i><div class="d-none d-lg-block">Trend</div>
-                                                    </a>
-                        
-                                                    <a class="nav-item nav-link flex-fill" id="tab-btn-01-d" href="#tab-01-d"
-                                                    data-toggle="pill" aria-controls="tab-01-d" aria-selected="false" role="tab">
-                                                    <i class="fas fa-exclamation-circle h4 fa-fw"></i><div class="d-none d-lg-block">Disparities</div>
-                                                    </a>
-                        
-                                                 <a class="nav-item nav-link flex-fill" id="tab-btn-01-e" href="#tab-01-e"
-                                                 data-toggle="pill" aria-controls="tab-01-e" aria-selected="false" role="tab">
-                                                 <i class="fas fa-link h4 fa-fw"></i><div class="d-none d-lg-block">Links</div>
-                                                    </a>
-                                                
+                                                        <iframe title="" aria-label="Scatter Plot" id="datawrapper-chart-CL80B" src="https://datawrapper.dwcdn.net/CL80B/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="409"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                        
+                                                    </div>
                                                 </div>
-                                                
-                                                <div class="tab-content p-2 greyitem2" id="tabs-01-content">
-                                                
-                                                    <div class="tab-pane fade show active" id="tab-01-a" aria-labelledby="tab-btn-01-a" role="tabpanel">
-                                                            <iframe title="" aria-label="Table" id="datawrapper-chart-r5ziK" src="https://datawrapper.dwcdn.net/r5ziK/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="844"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                    </div>
+
+                                    <div class="col-lg-4 col-sm-8">
+                                            Explanation colum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row my-4">
+                            <div class="col-lg-4 col-sm-8">
+                                    <div class="accordion-group my-1" role="tablist" id="accordion-01">
+    
+                                            <div class="card">
+                                        
+                                                <a class="card-header collapse collapsed" id="acc-button-01" data-toggle="collapse" href="#panel-acc-button-01"  role="tab" aria-expanded="false" aria-controls="panel-acc-button-01">
+                                                    <span class="title" role="heading" aria-level="3">More information</span>
+                                                </a>
+                                        
+                                                <div class="collapse" id="panel-acc-button-01" role="tabpanel" aria-labelledby="acc-button-01" data-parent="#accordion-01">
+                                        
+                                                    <div class="card-body">
+                                                            <ul><li><a href="http://www.aaaai.org/home.aspx" content="http://www.aaaai.org/home.aspx" class="message_urls" target="_blank">American Academy  of Allergy and Immunology</a></li><li><a href="http://www.healthyschools.org/links.html" content="http://www.healthyschools.org/links.html" class="message_urls" target="_blank">Healthy Schools Network, Inc.</a></li><li><a href="http://www.airnow.gov/" content="http://www.airnow.gov/" class="message_urls" target="_blank">EPA AIRNow</a></li><li><a href="http://www.aafa.org/" content="http://www.aafa.org/" class="message_urls" target="_blank">Asthma and Allergy Foundation of America</a></li><li><a href="http://www.asthmacommunitynetwork.org/resources/conferences" content="http://www.asthmacommunitynetwork.org/resources/conferences" class="message_urls" target="_blank">Healthy Kids: The Key to Basics</a></li><li><a href="http://www.nhlbi.nih.gov/about/org/naepp/" content="http://www.nhlbi.nih.gov/about/org/naepp/" class="message_urls" target="_blank">National Asthma Education and Prevention Program</a></li><li><a href="http://www.lung.org" content="http://www.lung.org" class="message_urls" target="_blank">The American Lung Association </a></li><li><a href="https://www.schools.nyc.gov/docs/default-source/default-document-library/asthma-medication-administration-form-english" content="https://www.schools.nyc.gov/docs/default-source/default-document-library/asthma-medication-administration-form-english" class="message_urls" target="_blank">Asthma Medication Administration Form (AMAF) School Year 2018-19</a></li></ul>
                                                     </div>
-                                                
-                                                    <div class="tab-pane fade" id="tab-01-b" aria-labelledby="tab-btn-01-b" role="tabpanel">
-                                                            <iframe title="" aria-label="USA new york city neighborhoods (ntas) choropleth map" id="datawrapper-chart-52c6Y" src="https://datawrapper.dwcdn.net/52c6Y/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
-                                                    </div>
-                                                
-                                                    <div class="tab-pane fade" id="tab-01-c" aria-labelledby="tab-btn-01-c" role="tabpanel">
-                                                            <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-0JdfH" src="https://datawrapper.dwcdn.net/0JdfH/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
-                                                    </div>
-                        
-                                                    <div class="tab-pane fade" id="tab-01-d" aria-labelledby="tab-btn-01-d" role="tabpanel">
-                                                            <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-80S2v" src="https://datawrapper.dwcdn.net/80S2v/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
-                                                        </div>
-                        
-                        
-                                                        <div class="tab-pane fade" id="tab-01-e" aria-labelledby="tab-btn-01-e" role="tabpanel">
-                                                                <iframe title="" aria-label="Scatter Plot" id="datawrapper-chart-CL80B" src="https://datawrapper.dwcdn.net/CL80B/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="409"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
-                                                            </div>
-                        
-                        
+                                        
                                                 </div>
-                                      </div>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-6">
-                                        <div class="accordion-group my-1" role="tablist" id="accordion-02">
+                                                <!-- .collapse -->
+                                        
+                                            </div>
+                                            <!-- .card (end of first accordion, repeat as needed) -->
+            
+            
+                                        
+                                        </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-8">
+                                    <div class="accordion-group my-1" role="tablist" id="accordion-02">
     
                                             <div class="card">
                                         
@@ -456,9 +522,10 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
         
                                         
                                         </div>
-                                      </div>
-                                      <div class="col-6">
-                                        <div class="accordion-group my-1" role="tablist" id="accordion-03">
+                            </div>
+
+                            <div class="col-lg-4 col-sm-8">
+                                    <div class="accordion-group my-1" role="tablist" id="accordion-03">
     
                                             <div class="card">
                                         
@@ -481,22 +548,19 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
         
                                         
                                         </div>
-                                      </div>
-                                  </div>
+                            </div>
 
-                              </div>
-                          </div>
-
-
-
-                          
-
-
-                         
                         </div>
-                        <!--end primary window-->
+
+
+                            
+
+                                    
+
+                </div>
+                <!--end primary window-->
            
-                    </div>
+
             </div>
 
        <br><br>

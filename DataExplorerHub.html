@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!--
-NOTES:
-NOW WITH DEEP LINKING ENABLED!
+This tests an integrated hub page, now with deep linking
 -->
 
 <html lang="en" dir="ltr">
@@ -156,28 +155,13 @@ NOW WITH DEEP LINKING ENABLED!
                     </div>
                     <!-- .nav-item -->
 
-                    <div class="nav-item dropdown">
+                    <div class="nav-item">
     
-                        <a class="nav-link dropdown-toggle active" href="DataExplorerHub.html" id="nav-item-03" data-toggle="dropdown"
+                        <a class="nav-link active" href="DataExplorerHub.html" id="nav-item-03" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false" role="button"><i class="fas fa-chart-line"></i>&nbsp;Data Explorer
                         </a>  
                         
-                        <div class="dropdown-menu" aria-labelledby="nav-item-03">
 
-                            <ul class="extensible-list">
-                                <li><a href="/Data/Outdoor.html">Outdoor Air</a></li>
-                                <li><a href="#">Housing</a></li>
-                                <li><a href="#">Climate</a></li>
-                                <li><a href="#">Transportation</a></li>
-                                <li><a href="#">Food</a></li>
-                                <li><a href="#">Pests</a></li>
-                                <li><a href="#">Special populations</a></li>
-                                <li><a href="">Child health</a></li>
-                                <hr>
-                                <li><a href="">All health outcomes</a></li>
-                            </ul>
-
-                        </div>
 
                     </div>
                     <!-- .nav-item -->
@@ -207,11 +191,22 @@ NOW WITH DEEP LINKING ENABLED!
     <main id="skip-header-target" role="main" style="background-color:#f8f9fa;">
 
 <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item inactive"><a href="Index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Data Explorer</li>
+                 
+
+                </ol>
+
+            </nav>
+
+
         <div class="row">
-                <div class="col-3">
-                    <div class="sticky-top">
-                    <h2>Data Explorer</h2>
-                    <hr>
+                <div class="col-2">
+                    <div class="sticky-top fs-sm pt-2" style="background-color: #DCE2E2; border-radius: 3px;">
+                    <p class="font-weight-light text-center"><i class="fas fa-chart-line"></i>&nbsp;Data Explorer Topics</p>
+                    <hr style="height:1px; border:none; color:#000; background-color:#000;">
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active tab-link" id="outdoor-tab" data-toggle="pill" href="#outdoor" role="tab" aria-controls="outdoor" aria-selected="true">Outdoor air</a>
                    
@@ -224,7 +219,8 @@ NOW WITH DEEP LINKING ENABLED!
                     <a class="nav-link tab-link" id="food-tab" data-toggle="pill" href="#food" role="tab" aria-controls="food" aria-selected="true">Food</a>
                    
                     <a class="nav-link tab-link" id="pests-tab" data-toggle="pill" href="#pests" role="tab" aria-controls="pests" aria-selected="false">Pests</a>
-                    <div class="border-bottom"></div>
+
+                    <hr>
                    
                     <a class="nav-link tab-link" id="special-tab" data-toggle="pill" href="#special" role="tab" aria-controls="special" aria-selected="false">Special populations</a>
                    
@@ -256,9 +252,9 @@ NOW WITH DEEP LINKING ENABLED!
                 
                                 <div class="row">
                                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                                        <div class="card bg-light h-100 mb-2">
+                                        <div class="card bg-light mb-2">
                                             <div class="card-header"><b><i class="fas fa-info-circle"></i>&nbsp;Annual Report</b></div>
-                                            <img src="../images/nyccasbanner.jpg" class="card-img-top" alt="New York City seen from an airplane">
+                                            <img src="./images/nyccasbanner.jpg" class="card-img-top" alt="New York City seen from an airplane">
                                             <div class="card-body">
                                                 <a href="https://nyc-ehs.net/besp-report/web/nyccas">Neighborhood Air Quality 2008-2018</a>: pollutants, key factors, and air quality trends over time in New York City.
                                             </div>
@@ -269,10 +265,10 @@ NOW WITH DEEP LINKING ENABLED!
                                     </div>
                 
                                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                                        <div class="card bg-light h-100 mb-2">
+                                        <div class="card bg-light mb-2">
                                             <div class="card-header"><b><i class="fas fa-wind"></i>&nbsp;Explore air quality data</b></div>
                                              
-                                            <img src="../images/airquality.jpg" class="card-img-top" alt="New York City seen from an airplane">
+                                            <img src="./images/airquality.jpg" class="card-img-top" alt="New York City seen from an airplane">
                                                    
                                           
                                             
@@ -292,14 +288,14 @@ NOW WITH DEEP LINKING ENABLED!
                                     </div>
                 
                                     <div class="col-lg-4 col-sm-12">
-                                        <div class="card bg-light h-100 mb-2">
+                                        <div class="card bg-light mb-2">
                                             <div class="card-header"><b><i class="fas fa-atlas"></i>&nbsp;Snapshots</b></div>
-                                            <img src="../images/AQchart.PNG" class="card-img-top" alt="An image of a data chart">
+                                            <img src="./images/AQchart.PNG" class="card-img-top" alt="An image of a data chart">
                                             <div class="card-body">
                                                 <li><a href="">Traffic and air toxics</a></li>
                                                 <li><a href="">Traffic and noise</a></li>
                                                 <li><a href="">Cleaner fuels: who benefits?</a></li>
-                                                <li><a href="">Shifting to cleaner fuels - and cleaner air</a></li>
+                                                <li><a href="">Cleaner fuels - and cleaner air</a></li>
                                                 <li><a href="">Monitoring for environmental justice</a></li>
                                                 <hr>
                                                 <a href="/DataStories.html"><em>more air quality data stories</em></a>
@@ -320,7 +316,7 @@ NOW WITH DEEP LINKING ENABLED!
                 
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <h4><i class="fas fa-chart-line"></i>&nbsp;Get the data: <span class="text-muted">related indicators on the EH Data Portal</span></h4><br>
+                                        <h4><i class="fas fa-chart-line"></i>&nbsp;Get the data: <span class="text-muted">indicators on the EH Data Portal</span></h4><br>
                                         </div> 
                 
                                 </div>
@@ -346,9 +342,9 @@ NOW WITH DEEP LINKING ENABLED!
                                         <div class="card mb-2">
                                             <div class="card-header bg-light"><i class="fas fa-chart-bar"></i>&nbsp;Related health outcomes </div>
                                             <ul class="list-group list-group-flush">
-                                            <li class="list-group-item"><a href="Asthma.html">Asthma</a>
-                                            <li class="list-group-item"><a href="">Chronic obstructive pulmonary disease</a>
-                                            <li class="list-group-item"><a href="">Heart attacks</a>
+                                            <li class="list-group-item"><a href="DataExplorerHubAsthma.html">Asthma</a>
+                                            <li class="list-group-item"><a href="DataExplorerVis.html">Chronic obstructive pulmonary disease</a>
+                                            <li class="list-group-item"><a href="DataExplorerHubAsthma2.html">Heart attacks</a>
                                             <li class="list-group-item"><a href="">Low birth weight</a>
                                             <li class="list-group-item"><a href="">Health impacts of air pollution</a>
                                             </ul>
