@@ -1,4 +1,9 @@
-## About
+## About this repository
+This mocks up information architecture based on Hub Pages, which displays information in coherent topics that pull together related subtopics, showing related environmental, behavioral, and outcome indicators.
+
+See [Data Explorer Hub](https://nycehs.github.io/Hubs/DataExplorerHub.html) and [Asthma](https://nycehs.github.io/Hubs/DataExplorerHubAsthma.html) as key pages of this repo.
+
+## About the NYC Core Framework
 
 NYC Core Framework is a Bootstrap-based web framework with added design patterns and other components optimized for accessibility, translatability, usability, and clarity of presentation. NYC Core Framework is the product of hard work by team members from the [NYC Gov Lab & Studio](http://nyc.gov/govlabstudio) at the City's Department of Information Technology and Telecommunications (DoITT). Thank you to:
 - Carl Avidano
