@@ -280,7 +280,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                 <div class="card mb-2">
                                         <div class="card-header bg-light">
                                          
-                                          Related topics</div>
+                                                <i class="fas fa-link"></i>&nbsp;Related topics</div>
                                             
                                             <div class="card-body">
                                                    <ul>
@@ -291,6 +291,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                                                                                                                 
                                             </div>
                                             </div>
+
                         </div>
 
 
@@ -298,11 +299,13 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
 
                     </div>
 
-                    <div class="row my-4 border-top pt-2">
+
+                    <div class="row my-4 border-top pt-2 pb-4">
                         <div class="col-12 mb-2">
-                                <strong>Choose indicator to display:</strong> 
+                                <strong><i class="fas fa-chart-line"></i>&nbsp;Choose indicator to display:</strong> 
                         </div>
-                        <div class="col-lg-8 col-sm-12 mb-2">
+
+                        <div class="col-lg-8 col-sm-8 mb-2 ">
 
                                 <div class="dropdown mb-2">
                                     <button type="button" class="btn btn-md btn-outline-success dropdown-toggle btn-block" id="indicatordropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Asthma emergency department visits</button> 	
@@ -314,62 +317,122 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                         
                                     </div>
 
-                                    <b> <i class="fas fa-info-circle"></i>&nbsp;Asthma ED visits</b> are an important measure of asthma, particularly for children age 5 to 17. They're triggered by several environmental conditions and there are notable racial and socioeconomic disparities.   
-
-                                        
+                                    <b> <i class="fas fa-info-circle"></i>&nbsp;Asthma emergency department visits</b> are an important measure of asthma, particularly for children age 5 to 17. They're triggered by several environmental conditions and there are notable racial and socioeconomic disparities.   
+                                    <hr>
+                                    In this page, the "Refine Data" item to the right can control indicator-wide characteristics (like age or geography), and the chart-specific ones (currently using one modal) can control chart-specific options - like y-axis for the scatterplot.                                        
                         </div>
-                        <div class="col-lg-4 col-sm-12">
-                                <div class="btn-toggle">
-                                        <button class="btn btn-block btn-light" data-toggle="collapse" data-target="#toggle-target" aria-expanded="true" aria-controls="toggle-target">
-                                            <span class="title"><i class="fas fa-cog"></i>&nbsp;Refine data</span>
+                        <div class="col-lg-4 col-sm-4">
+                                
+                                        <button type="button" class="btn btn-block btn-outline-success dropdown-toggle" data-toggle="collapse" data-target="#refineShow" aria-controls="refineShow">
+                                            <span><i class="fas fa-cog"></i>&nbsp;Refine</span>
                                         </button>
-                                    </div>
+
+                                        <div class="collapse show bg-light p-2 fs-sm" id="refineShow">
+                                                <b>Age:</b>
+                                                <div class="row mb-1">
+                                                <div class="col">
+                                                <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1">0-4</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">5-17</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                                <label class="form-check-label" for="inlineRadio3">18+</label>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                <b>Geography</b>
+                                                <div class="row mb-1">
+                                                <div class="col">
+                                                <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1">Community district</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">NTA</label>
+                                                </div> 
+                                                </div>
+                                                </div>
+                                        </div>
+                                  
                                     
-                                    <div class="collapse show bg-white p-2" id="toggle-target" role="navigation">
-                                    <b>Age:&nbsp;&nbsp;&nbsp;</b>
-                                                                                                    <div class="form-check form-check-inline">
-                                                                                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                                                                      <label class="form-check-label" for="inlineRadio1">0 to 4</label>
-                                                                                                    </div>
-                                                                                                    <div class="form-check form-check-inline">
-                                                                                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                                                                      <label class="form-check-label" for="inlineRadio2">5 to 17</label>
-                                                                                                    </div>
-                                                                                                    <div class="form-check form-check-inline">
-                                                                                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                                                                                      <label class="form-check-label" for="inlineRadio3">18+</label>
-                                                                                                    </div>
-                                      <br>
-                                                                                                    <b>Measure:&nbsp;&nbsp;&nbsp;</b>
-                                                                                                    <div class="form-check form-check-inline">
-                                                                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                                                                            <label class="form-check-label" for="inlineRadio1">Rate</label>
-                                                                                                          </div>
-                                                                                                          <div class="form-check form-check-inline">
-                                                                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                                                                            <label class="form-check-label" for="inlineRadio2">Count</label>
-                                                                                                          </div>    
-                                                                                                          <br>
-                                                                                                          <b>Geography:&nbsp;&nbsp;&nbsp;</b>
-                                                                                                          <div class="form-check form-check-inline">
-                                                                                                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                                                                                  <label class="form-check-label" for="inlineRadio1">Community district</label>
-                                                                                                                </div>
-                                                                                                                <div class="form-check form-check-inline">
-                                                                                                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                                                                                  <label class="form-check-label" for="inlineRadio2">NTA</label>
-                                                                                                                </div> 
-                                    </div>
                         </div>
+
+
+
+                        <!-- Refine Modal -->
+                            <div class="modal fade" id="refineModal" tabindex="-1" role="dialog" aria-labelledby="refineModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Refine chart</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                            <div class="row mb-2">
+                                             <div class="col">
+                                                    <div class="dropdown">
+                                                            <a class="btn btn-outline-success dropdown-toggle btn-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                              Year
+                                                            </a>
+                                                          
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                              <a class="dropdown-item" href="#">2019</a>
+                                                              <a class="dropdown-item" href="#">2018</a>
+                                                              <a class="dropdown-item" href="#">2017</a>
+                                                            </div>
+                                                          </div>
+                                             </div>
+
+                                             </div>
+
+                                            <b>Measure:&nbsp;&nbsp;&nbsp;</b>
+                                            <div class="row no-gutters mb-2">
+                                            <div class="col-1">Rate</div>
+                                            <div class="col-1"><div class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                     <label class="custom-control-label" for="customSwitch1"></label>
+                                                  </div> </div>
+                                            <div class="col-1">Count</div>
+                                        </div>
+
+                                                  <b>Geography</b>
+                                                  <div class="row mb-2">
+                                                      <div class="col">
+                                                            <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                                    <label class="form-check-label" for="inlineRadio1">Community district</label>
+                                                                  </div>
+                                                                  <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                                    <label class="form-check-label" for="inlineRadio2">NTA</label>
+                                                                  </div> 
+                                                      </div>
+                                                  </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                         
                     </div>
 
+
+<!--start the data display-->
 
                         <div class="row my-4">
                             <div class="col-lg-8 col-sm-12">
                                     <div class="card">
                                         <div class="card-header bg-light">
-                                                <div class="float-right"><a href="#"><i class="fas fa-cog"></i></a></div>
+                                                <div class="float-right"><a href="#" data-toggle="modal" data-target="#refineModal" aria-controls="refineModal"><i class="fas fa-cog"></i></a></div>
                                                 <i class="fas fa-chart-bar"></i>&nbsp;Summary</div>
                                             <div class="card-body">
                                             
@@ -381,7 +444,15 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                             </div>
 
                             <div class="col-lg-4 col-sm-12">
-                                Explanation colum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    <div class="btn-toggle">
+                                            <button class="btn btn-block btn-md btn-light" data-toggle="collapse" data-target="#toggle-target" aria-expanded="false" aria-controls="toggle-target">
+                                                <span>About the measure</span>
+                                            </button>
+                                        </div>
+                                        
+                                        <DIV class="collapse show bg-white p-2 fs-sm" id="toggle-target" role="navigation">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        </DIV>
                             </div>
 
                         </div>
@@ -392,7 +463,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                             <div class="col-lg-8 col-sm-12">
                                     <div class="card">
                                             <div class="card-header bg-light">
-                                                    <div class="float-right"><a href="#"><i class="fas fa-cog"></i></a></div>
+                                                    <div class="float-right"><a href="#" data-toggle="modal" data-target="#refineModal" aria-controls="refineModal"><i class="fas fa-cog"></i></a></div>
                                                     <i class="fas fa-map-marker-alt"></i>&nbsp;Map</div>
 
                                             <div class="card-body">                                       
@@ -413,7 +484,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                             <div class="col-lg-8 col-sm-12">
                                     <div class="card">
                                             <div class="card-header bg-light">
-                                                    <div class="float-right"><a href="#"><i class="fas fa-cog"></i></a></div>
+                                                    <div class="float-right"><a href="#" data-toggle="modal" data-target="#refineModal" aria-controls="refineModal"><i class="fas fa-cog"></i></a></div>
                                                     <i class="fas fa-chart-line"></i>&nbsp;Trend</div>
 
                                             <div class="card-body">
@@ -434,7 +505,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                 <div class="col-lg-8 col-sm-12">
                                         <div class="card">
                                                 <div class="card-header bg-light">
-                                                        <div class="float-right"><a href="#"><i class="fas fa-cog"></i></a></div>
+                                                        <div class="float-right"><a href="#" data-toggle="modal" data-target="#refineModal" aria-controls="refineModal"><i class="fas fa-cog"></i></a></div>
                                                         <i class="fas fa-exclamation-circle"></i>&nbsp;Disparities</div>
                                                 <div class="card-body">
 
@@ -454,7 +525,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                     <div class="col-lg-8 col-sm-12">
                                             <div class="card">
                                                 <div class="card-header bg-light">
-                                                    <div class="float-right"><a href="#"><i class="fas fa-cog"></i></a></div>
+                                                        <div class="float-right"><a href="#" data-toggle="modal" data-target="#refineModal" aria-controls="refineModal"><i class="fas fa-cog"></i></a></div>
                                                     <i class="fas fa-link"></i>&nbsp;Connections</div>
                                                     <div class="card-body">
 
@@ -473,81 +544,66 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
 
                         <div class="row my-4">
                             <div class="col-lg-4 col-sm-8">
-                                    <div class="accordion-group my-1" role="tablist" id="accordion-01">
-    
-                                            <div class="card">
-                                        
-                                                <a class="card-header collapse collapsed" id="acc-button-01" data-toggle="collapse" href="#panel-acc-button-01"  role="tab" aria-expanded="false" aria-controls="panel-acc-button-01">
-                                                    <span class="title" role="heading" aria-level="3">More information</span>
-                                                </a>
-                                        
-                                                <div class="collapse" id="panel-acc-button-01" role="tabpanel" aria-labelledby="acc-button-01" data-parent="#accordion-01">
-                                        
-                                                    <div class="card-body">
-                                                            <ul><li><a href="http://www.aaaai.org/home.aspx" content="http://www.aaaai.org/home.aspx" class="message_urls" target="_blank">American Academy  of Allergy and Immunology</a></li><li><a href="http://www.healthyschools.org/links.html" content="http://www.healthyschools.org/links.html" class="message_urls" target="_blank">Healthy Schools Network, Inc.</a></li><li><a href="http://www.airnow.gov/" content="http://www.airnow.gov/" class="message_urls" target="_blank">EPA AIRNow</a></li><li><a href="http://www.aafa.org/" content="http://www.aafa.org/" class="message_urls" target="_blank">Asthma and Allergy Foundation of America</a></li><li><a href="http://www.asthmacommunitynetwork.org/resources/conferences" content="http://www.asthmacommunitynetwork.org/resources/conferences" class="message_urls" target="_blank">Healthy Kids: The Key to Basics</a></li><li><a href="http://www.nhlbi.nih.gov/about/org/naepp/" content="http://www.nhlbi.nih.gov/about/org/naepp/" class="message_urls" target="_blank">National Asthma Education and Prevention Program</a></li><li><a href="http://www.lung.org" content="http://www.lung.org" class="message_urls" target="_blank">The American Lung Association </a></li><li><a href="https://www.schools.nyc.gov/docs/default-source/default-document-library/asthma-medication-administration-form-english" content="https://www.schools.nyc.gov/docs/default-source/default-document-library/asthma-medication-administration-form-english" class="message_urls" target="_blank">Asthma Medication Administration Form (AMAF) School Year 2018-19</a></li></ul>
-                                                    </div>
-                                        
+                                    <div class="card mb-2">
+                                            <div class="card-header bg-light">
+                                             
+                                                   More information</div>
+                                                
+                                                <div class="card-body">
+                                                        <ul><li><a href="http://www.aaaai.org/home.aspx" content="http://www.aaaai.org/home.aspx" class="message_urls" target="_blank">American Academy  of Allergy and Immunology</a></li><li><a href="http://www.healthyschools.org/links.html" content="http://www.healthyschools.org/links.html" class="message_urls" target="_blank">Healthy Schools Network, Inc.</a></li><li><a href="http://www.airnow.gov/" content="http://www.airnow.gov/" class="message_urls" target="_blank">EPA AIRNow</a></li><li><a href="http://www.aafa.org/" content="http://www.aafa.org/" class="message_urls" target="_blank">Asthma and Allergy Foundation of America</a></li><li><a href="http://www.asthmacommunitynetwork.org/resources/conferences" content="http://www.asthmacommunitynetwork.org/resources/conferences" class="message_urls" target="_blank">Healthy Kids: The Key to Basics</a></li><li><a href="http://www.nhlbi.nih.gov/about/org/naepp/" content="http://www.nhlbi.nih.gov/about/org/naepp/" class="message_urls" target="_blank">National Asthma Education and Prevention Program</a></li><li><a href="http://www.lung.org" content="http://www.lung.org" class="message_urls" target="_blank">The American Lung Association </a></li><li><a href="https://www.schools.nyc.gov/docs/default-source/default-document-library/asthma-medication-administration-form-english" content="https://www.schools.nyc.gov/docs/default-source/default-document-library/asthma-medication-administration-form-english" class="message_urls" target="_blank">Asthma Medication Administration Form (AMAF) School Year 2018-19</a></li></ul>
+                                                                                                                                    
                                                 </div>
-                                                <!-- .collapse -->
-                                        
-                                            </div>
-                                            <!-- .card (end of first accordion, repeat as needed) -->
-            
-            
-                                        
-                                        </div>
+                                                </div>
                             </div>
 
                             <div class="col-lg-4 col-sm-8">
-                                    <div class="accordion-group my-1" role="tablist" id="accordion-02">
-    
-                                            <div class="card">
-                                        
-                                                <a class="card-header collapse collapsed" id="acc-button-02" data-toggle="collapse" href="#panel-acc-button-02"  role="tab" aria-expanded="false" aria-controls="panel-acc-button-02">
-                                                    <span class="title" role="heading" aria-level="3">About the measure</span>
-                                                </a>
-                                        
-                                                <div class="collapse" id="panel-acc-button-02" role="tabpanel" aria-labelledby="acc-button-02" data-parent="#accordion-02">
-                                        
-                                                    <div class="card-body">
-                                                            CONTENT
-                                                    </div>
-                                        
+                                    <div class="card mb-2">
+                                            <div class="card-header bg-light">
+                                             
+                                                   Data tools</div>
+                                                
+                                                <div class="card-body">
+                                                        <ul>
+                                                            <li>Data source</li>
+                                                            <li>Download data</li>
+                                                            <li>Cite data</li>
+                                                        </ul>
+                                                                                                                                    
                                                 </div>
-                                                <!-- .collapse -->
-                                        
-                                            </div>
-                                            <!-- .card (end of first accordion, repeat as needed) -->
-        
-        
-                                        
-                                        </div>
+                                                </div>
                             </div>
 
                             <div class="col-lg-4 col-sm-8">
-                                    <div class="accordion-group my-1" role="tablist" id="accordion-03">
-    
-                                            <div class="card">
-                                        
-                                                <a class="card-header collapse collapsed" id="acc-button-03" data-toggle="collapse" href="#panel-acc-button-03"  role="tab" aria-expanded="false" aria-controls="panel-acc-button-03">
-                                                    <span class="title" role="heading" aria-level="3">Related data</span>
-                                                </a>
-                                        
-                                                <div class="collapse" id="panel-acc-button-03" role="tabpanel" aria-labelledby="acc-button-03" data-parent="#accordion-03">
-                                        
-                                                    <div class="card-body">
-                                                            CONTENT
-                                                    </div>
-                                        
+                                    <div class="card mb-2">
+                                            <div class="card-header bg-light">
+                                             
+                                                   Related data</div>
+                                                
+                                                <div class="card-body" style="height: 200px; overflow: scroll; overflow-x:hidden;">
+                                                    Related data from the Health Department:
+                                                        <ul>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                        </ul>
+                                                                                                                                    
                                                 </div>
-                                                <!-- .collapse -->
-                                        
-                                            </div>
-                                            <!-- .card (end of first accordion, repeat as needed) -->
-        
-        
-                                        
-                                        </div>
+                                                </div>
                             </div>
 
                         </div>
@@ -789,13 +845,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
     <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
     <script src="https://nycehs.github.io/Portal-Core-Repo/js/main.js"></script>
 
-  <!--This script makes the modal fed from an HTML file-->
-  <script>
-    $('.li-modal').on('click', function(e){
-      e.preventDefault();
-      $('#theModal').modal('show').find('.modal-content').load($(this).attr('href'));
-    });
-  </script>
+
 
 </body>
 
