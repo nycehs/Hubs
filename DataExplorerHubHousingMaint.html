@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+<!--NOTES:
+This version is designed to display messaging and data together.
+It also requires one choice at a time by the user: indicator, then characteristic.
+It keeps the data and the description in the main columns.
+It's a "subtopic" page with indicator selection and display.
+It also turns indicator differences (like age) into measures or characteristics.
+Meta data are below main display.
+It removes lateral browsing from the page display (hub to hub), leaving it to the menu.
+-->
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Corrects IE Compatibility Mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Housing Maintenance: EH Data Portal</title>
+
+    <!--Fontawesome Icons-->
+    <link rel="stylesheet" href="https://nycehs.github.io/Portal-Core-Repo/fontawesome/css/all.min.css">
+    <!--NYC Core Framework Theme-->
+    <link rel="stylesheet" href="https://nycehs.github.io/Portal-Core-Repo/css/theme.css">
+    <!--Custom additions for Portal items-->
+    <link rel="stylesheet" href="https://nycehs.github.io/Portal-Core-Repo/css/custom.css">
+
+<style>
+/*This CSS controls read more/show less toggle.*/
+[aria-expanded="false"] > .expanded,
+[aria-expanded="true"] > .collapsed {
+  display: none;
+}
+</style>
+
+
+</head>
+
+<body>
+        
+    
+    <!-- For keyboard users -->
+    <a class="sr-only sr-only-focusable skip-menu" href="#skip-header-target">Skip Header</a>
+
+    <header id="global-header" class="titleslide" role="banner">
+
+        <div class="bg-black text-white" id="nyc-top-header">
+
+            <div class="container-fluid wide">
+
+                <div class="row py-1 align-items-center justify-content-between">
+
+                    <div class="col-auto">
+                        <p class="d-none d-md-flex fs-md">
+                            <a class="text-reset" href="https://www1.nyc.gov/">
+                                <strong>nyc.gov</strong>
+                            </a>
+                            <span class="mx-1" aria-hidden="true">|</span>
+                            Department of Health
+                        </p>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-auto">
+
+                        <ul class="extensible-list horizontal fs-md">
+                            <li>
+                                <a class="text-reset" href="http://www1.nyc.gov/">
+                                    <strong>
+                                        311
+                                    </strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-reset" href="http://www1.nyc.gov/home/search/index.page">
+                                    <strong>
+                                        Search all NYC.gov
+                                    </strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www1.nyc.gov/" title="Go to nyc.gov">
+                                    <img class="d-block" src="./images/nyc-bubble-logo.svg" width="45" alt="NYC Logo">
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- .col -->
+
+                </div>
+                <!-- .row -->
+
+            </div>
+            <!-- .container-fluid -->
+
+        </div>
+        <!-- #nyc-top-header -->
+
+        
+
+                <div class="container-fluid wide">
+    
+                    
+    
+                            
+    
+                                <!-- Menu Toggle -->
+                                <div class="col-auto d-flex d-lg-none">
+    
+                                    <button class="no-btn-style" type="button" data-toggle="collapse"
+                                        data-target="#nav-primary" aria-controls="nav-primary" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <span class="fas fa-bars fa-lg" role="img"></span>
+                                    </button>
+    
+                                </div>
+                                <!-- .col -->
+    
+                                
+    
+                           
+    
+                      
+    
+                </div>
+                <!-- .container-fluid -->
+    
+         
+
+
+
+        <div class="container-fluid collapse d-lg-block px-0 border-lg-top border-lg-bottom" id="nav-primary" style="background-color:white;">
+
+            <h2 class="sr-only">
+                Primary Navigation
+            </h2>
+
+   
+            <div class="wide">
+
+                <nav class="nav nav-pills" role="navigation">
+    
+                     <!-- .nav-item -->
+    
+                    <div class="nav-item">
+    
+                        <a class="nav-link" href="Index.html" id="nav-item-01" role="button">
+                            <i class="fas fa-home"></i>&nbsp;EH Data Portal home
+                        </a>
+
+    
+                    </div>
+                    <!-- .nav-item -->
+
+                    <div class="nav-item">
+    
+                        <a class="nav-link" href="DataStories.html" id="nav-item-02" role="button">
+                            <i class="fas fa-atlas"></i>&nbsp;Data Stories
+                        </a>
+
+    
+                    </div>
+                    <!-- .nav-item -->
+
+                    <div class="nav-item dropdown">
+    
+                            <a class="nav-link dropdown-toggle active" href="DataExplorerHub.html" id="nav-item-03" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" role="button"><i class="fas fa-chart-line"></i>&nbsp;Data Explorer
+                            </a>  
+                            
+                            <div class="dropdown-menu" aria-labelledby="nav-item-03">
+    
+                                <ul class="extensible-list">
+                                    <li><a href="DataExplorerHub.html#outdoor">Outdoor Air</a></li>
+                                    <li><a href="DataExplorerHub.html#housing">Housing</a></li>
+                                    <li><a href="DataExplorerHub.html#climate">Climate</a></li>
+                                    <li><a href="DataExplorerHub.html#transportation">Transportation</a></li>
+                                    <li><a href="DataExplorerHub.html#food">Food</a></li>
+                                    <li><a href="DataExplorerHub.html#pests">Pests</a></li>
+                                    <hr>
+                                    <li><a href="DataExplorerHub.html#special">Social/economic conditions</a></li>
+                                    <li><a href="DataExplorerHub.html#child">Child health</a></li>
+                                    <li><a href="DataExplorerHub.html#all">All health outcomes</a></li>
+                                </ul>
+    
+                            </div>   
+                    </div>
+                    <!-- .nav-item -->
+    
+                    <div class="nav-item">
+    
+                        <a class="nav-link" href="NeighborhoodReports.html" id="nav-item-04" role="button">
+                            <i class="fas fa-map-marked-alt"></i>&nbsp;Neighborhood Reports
+                        </a>
+    
+                    </div>
+                    <!-- .nav-item -->
+    
+                </nav>
+
+    
+            </div>
+            <!-- .wide -->
+    
+        </div>
+
+    </header>
+    <!-- #global-header -->
+
+
+
+    <main id="skip-header-target" role="main" style="background-color:#f8f9fa;">
+       
+            <div class="container fs-sm">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="Index.html">Portal Home</a></li>
+                        <li class="breadcrumb-item"><a href="DataExplorerHub.html">Data Explorer
+                        </a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Housing maintenance</li>
+                            </ol>
+                    
+                </nav>
+                        
+                <!--start primary window-->
+                <div id="primary-content">
+                    <h2>Housing maintenance</h2>
+
+                    <div class="row">
+                        <div class="col-lg-8 col-sm-12">
+                                <div class="card mb-2">
+                                        <div class="card-header bg-light"> <i class="fas fa-info-circle"></i>&nbsp;About housing maintenance</div>
+                                        <div class="card-body"><p>A well-maintained home can keep people healthy - but a poorly-maintained home presents an environment that threatens people's health.</p>
+
+                
+                                            <div class="collapse" id="block-id">
+                                                    <p>No family should have to choose between affordable and healthy housing. All tenants are entitled to safe, decent and sanitary housing, which prevents disease and injury.
+
+                                                            In New York City, substandard or poor housing tends to cluster in neighborhoods. Homes that are deteriorating or dilapidated, or homes near buildings with broken or boarded-up windows, disproportionately tend to be in low-income neighborhoods, although the differences for these indicators have decreased.
+                                                            
+                                                            </p>
+                                            <p>Maintenance issues aren't about the need to tidy up - they stem from long-term structural neglict by landlords and owners. Maintenance deficiencies are associated with:
+                                                <ul>
+                                                    <li>Increased likelihood of pest infestations, which can worsen asthma</li>
+                                                    <li>Exposure to lead where lead paint is present, which may cause serious health problems</li>
+                                                    <li>Mold growth, which may cause allergic reactions</li>
+                                                </ul>
+                                            </p>
+                                            <p>All building owners are required by law to provide essential services such as heat and hot water, make timely repairs, and maintain a pest-free building.                                                 </p>
+                                            </div>
+                                                    <div class="float-right">
+                                                    <a href="#block-id" data-toggle="collapse" aria-expanded="false" aria-controls="block-id"><span class="collapsed">Read more...</span><span class="expanded">Show less.</span></a> </div>
+                                                </div>
+                                    </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-12">
+                                <div class="card mb-2">
+                                        <div class="card-header bg-light">
+                                         
+                                                <i class="fas fa-link"></i>&nbsp;Related topics</div>
+                                            
+                                            <div class="card-body">
+                                                   <ul>
+                                                       <li><a href="DataExplorerHub.html#special">Social/economic conditions</a></li>
+                                                       <li><a href="DataExplorerHub.html#pests">Pests</a></li>
+                                                   </ul>
+                                                                                                                                
+                                            </div>
+                                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                    <div class="row my-4 border-top pt-2 pb-4">
+                        <div class="col-12 mb-2">
+                                <strong><i class="fas fa-chart-line"></i>&nbsp;Choose indicator to display:</strong> 
+                        </div>
+
+                        <div class="col-lg-8 col-sm-12 mb-2 ">
+
+                                <div class="dropdown mb-2">
+                                    <button type="button" class="btn btn-md btn-outline-success dropdown-toggle btn-block" id="indicatordropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Homes with 3+ maintenance deficiencies</button> 	
+                                    <div class="dropdown-menu" style="width: 100%;" aria-labelledby="indicatordropdown">
+                                            <a class="dropdown-item" href="#">Children in homes with supplemental heat</a>
+                                            <a class="dropdown-item" href="#">Children in homes with cracks or holes</a>
+                                            <a class="dropdown-item" href="#">Homes near structures rates good or excellent</a>
+                                            <a class="dropdown-item" href="#">Homes using supplemental heat</a>
+                                            <a class="dropdown-item" href="#">Homes with cracks or holes</a>
+                                            <a class="dropdown-item" href="#">Homes with leaks</a>
+                                            <a class="dropdown-item" href="#">Pre-1960 homes with peeling paint</a>
+                                            <a class="dropdown-item" href="#">Renter-occupied homes with any health-related maintenance problem</a>
+                                            <a class="dropdown-item" href="#">Renter occupied homes with no maintenance deficiencies</a>
+                                          </div>
+                                        
+                                    </div>
+
+                                    <b> <i class="fas fa-info-circle"></i>&nbsp;Homes wtih 3+ maintenance deficiencies</b> indicate that Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus metus ipsum, elementum ac tempus in, faucibus et purus. Mauris iaculis euismod vehicula. In quis mi nibh. Nulla vestibulum nisl a dui laoreet, sed luctus risus ultricies. 
+                                    <hr>
+                                    In this page, the "Refine Data" item to the right can control indicator-wide characteristics (like age or geography), and the chart-specific ones (currently using one modal) can control chart-specific options - like y-axis for the scatterplot.                                          
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                                
+                                        <button type="button" class="btn btn-block btn-outline-success dropdown-toggle" data-toggle="collapse" data-target="#refineShow" aria-controls="refineShow">
+                                            <span><i class="fas fa-cog"></i>&nbsp;Refine</span>
+                                        </button>
+
+                                        <div class="collapse show bg-light p-2 fs-sm" id="refineShow">
+                                                <b>Geography</b>
+                                                <div class="row mb-1">
+                                                <div class="col">
+                                                <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1">Community district</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">NTA</label>
+                                                </div> 
+                                                </div>
+                                                </div>
+                                        </div>
+                                  
+                                    
+                        </div>                        
+                    </div>
+
+
+<!--start the data display-->
+
+                        <div class="row">
+                            <div class="col">
+                                <h4><i class="fas fa-chart-bar"></i>&nbsp;Summary</h4>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2 mb-4">
+                            <div class="col-lg-8 col-sm-12">
+
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                                <div class="float right">
+                                                        <div class="dropdown">
+                                                                <button class="btn btn-sm float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select years
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                  <a class="dropdown-item" href="#">Select all</a>
+                                                                  <a class="dropdown-item" href="#">2016</a>
+                                                                  <a class="dropdown-item" href="#">2015</a>
+                                                                </div>
+                                                              </div>
+
+                                                              <div class="dropdown">
+                                                                    <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select geography
+                                                                    </button>
+                                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                                      <a class="dropdown-item" href="#">Select all</a>
+                                                                      <a class="dropdown-item" href="#">City</a>
+                                                                      <a class="dropdown-item" href="#">Borough</a>
+                                                                      <a class="dropdown-item" href="#">Neighborhood</a>
+                                                                    </div>
+                                                                  </div>
+                                                </div>
+ 
+
+                                                </div>
+                                            <div class="card-body">
+                                            
+                                                
+                                <iframe title="" aria-label="Table" id="datawrapper-chart-r5ziK" src="https://datawrapper.dwcdn.net/r5ziK/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="844"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                
+                                            </div>
+                                        </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-12">
+                                    <div class="btn-toggle">
+                                            <button class="btn btn-block btn-md btn-light" data-toggle="collapse" data-target="#toggle-target" aria-expanded="false" aria-controls="toggle-target">
+                                                <span><i class="fas fa-info-circle"></i>&nbsp;About the measure</span>
+                                            </button>
+                                        </div>
+                                        
+                                        <DIV class="collapse show bg-white p-2 fs-sm" id="toggle-target" role="navigation">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        </DIV>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                                <div class="col">
+                                    <h4><i class="fas fa-map-marker-alt"></i>&nbsp;Map</h4>
+                                </div>
+                            </div>
+                        <div class="row mt-2 mb-4">
+                            <div class="col-lg-8 col-sm-12">
+                                    <div class="card">
+                                            <div class="card-header bg-light">
+                                                    <div class="float right">
+                                                            <div class="dropdown">
+                                                                    <button class="btn btn-sm float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Year
+                                                                    </button>
+                                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                                                      <a class="dropdown-item" href="#">Select all</a>
+                                                                      <a class="dropdown-item" href="#">2016</a>
+                                                                      <a class="dropdown-item" href="#">2015</a>
+                                                                    </div>
+                                                                  </div>
+    
+                                                                  <div class="dropdown">
+                                                                        <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Geography
+                                                                        </button>
+                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                                                                          <a class="dropdown-item" href="#">Select all</a>
+                                                                          <a class="dropdown-item" href="#">City</a>
+                                                                          <a class="dropdown-item" href="#">Borough</a>
+                                                                          <a class="dropdown-item" href="#">Neighborhood</a>
+                                                                        </div>
+                                                                      </div>
+
+                                                                      <div class="dropdown">
+                                                                            <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Measure
+                                                                            </button>
+                                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
+                                                                              <a class="dropdown-item" href="#">Age-adjusted rate</a>
+                                                                              <a class="dropdown-item" href="#">Rate</a>
+                                                                              <a class="dropdown-item" href="#">Number</a>
+                                                                            </div>
+                                                                          </div>
+                                                    </div>
+                                            </div>
+
+                                            <div class="card-body">                                       
+                                                <iframe title="" aria-label="USA new york city neighborhoods (ntas) choropleth map" id="datawrapper-chart-52c6Y" src="https://datawrapper.dwcdn.net/52c6Y/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                
+                                            </div>
+                                        </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-12">
+                                    Explanation colum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                </div>
+
+                        </div>
+
+
+                        <div class="row">
+                                <div class="col">
+                                    <h4> <i class="fas fa-chart-line"></i>&nbsp;Trend</h4>
+                                </div>
+                            </div>
+                        <div class="row mt-2 mb-4">
+                            <div class="col-lg-8 col-sm-12">
+                                    <div class="card">
+                                            <div class="card-header bg-light">
+                                                    <div class="dropdown">
+                                                            <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Refine
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
+                                                              <a class="dropdown-item" href="#">Borough</a>
+                                                              <a class="dropdown-item" href="#">Age</a>
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="dropdown">
+                                                                <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Measure
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
+                                                                  <a class="dropdown-item" href="#">Age-adjusted rate</a>
+                                                                  <a class="dropdown-item" href="#">Rate</a>
+                                                                </div>
+                                                              </div>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-0JdfH" src="https://datawrapper.dwcdn.net/0JdfH/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12">
+                                    Explanation colum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                </div>
+
+
+                        </div>
+
+
+                        <div class="row">
+                                <div class="col">
+                                    <h4>  <i class="fas fa-exclamation-circle"></i>&nbsp;Disparities</h4>
+                                </div>
+                            </div>
+                        <div class="row mt-2 mb-4">
+                                <div class="col-lg-8 col-sm-12">
+                                        <div class="card">
+                                                <div class="card-header bg-light">
+                                                        <div class="dropdown">
+                                                                <button class="btn btn-sm mr-1 float-right btn-outline-success" type="button" disabled>Refine
+                                                                </button>
+                                                </div>
+                                                                
+                                                </div>
+                                                <div class="card-body">
+
+                                                    <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-80S2v" src="https://datawrapper.dwcdn.net/80S2v/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                    
+                                                </div>
+                                            </div>
+                                </div>
+
+                                <div class="col-lg-4 col-sm-12">
+                                        Explanation colum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="col">
+                                    <h4><i class="fas fa-link"></i>&nbsp;Connections</h4>
+                                </div>
+                            </div>
+                        <div class="row mt-2 mb-4">
+                                    <div class="col-lg-8 col-sm-12">
+                                            <div class="card">
+                                                <div class="card-header bg-light">
+                                                        <div class="float-right">
+                                                                <div class="dropdown">
+                                                                        <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connect to:
+                                                                        </button>
+                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton8">
+                                                                          <a class="dropdown-item" href="#">Sulfur dioxide</a>
+                                                                          <a class="dropdown-item" href="#">Ozone</a>
+                                                                          <a class="dropdown-item" href="#">Nitrogen dioxide</a>
+                                                                          <a class="dropdown-item" href="#">Fine particulate matter</a>
+                                                                          <a class="dropdown-item" href="#">Black carbon</a>
+                                                                          <hr>
+                                                                          <a class="dropdown-item" href="#">Cigarette smoking (adults)</a>
+                                                                          <a class="dropdown-item" href="#">No smoke-free home policy</a>
+                                                                          <a class="dropdown-item" href="#">Secondhand smoke</a>
+                                                                          <hr>
+                                                                          <a class="dropdown-item" href="#">Cockroaches</a>
+
+                                                                        </div>
+                                                                      </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-body">
+
+                                                        <iframe title="" aria-label="Scatter Plot" id="datawrapper-chart-CL80B" src="https://datawrapper.dwcdn.net/CL80B/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="409"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+                                        
+                                                    </div>
+                                                </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-sm-12">
+                                            Explanation colum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus tellus, dapibus nec metus non, posuere vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id faucibus lorem. Aenean ut est libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row my-4">
+                            <div class="col-lg-4 col-sm-8">
+                                    <div class="card mb-2">
+                                            <div class="card-header bg-light">
+                                             
+                                                <i class="fas fa-external-link-alt"></i>&nbsp;More information</div>
+                                                
+                                                <div class="card-body">
+                                                        <ul><li><a href="http://www.aaaai.org/home.aspx" content="http://www.aaaai.org/home.aspx" class="message_urls" target="_blank">American Academy  of Allergy and Immunology</a></li><li><a href="http://www.healthyschools.org/links.html" content="http://www.healthyschools.org/links.html" class="message_urls" target="_blank">Healthy Schools Network, Inc.</a></li><li><a href="http://www.airnow.gov/" content="http://www.airnow.gov/" class="message_urls" target="_blank">EPA AIRNow</a></li><li><a href="http://www.aafa.org/" content="http://www.aafa.org/" class="message_urls" target="_blank">Asthma and Allergy Foundation of America</a></li><li><a href="http://www.asthmacommunitynetwork.org/resources/conferences" content="http://www.asthmacommunitynetwork.org/resources/conferences" class="message_urls" target="_blank">Healthy Kids: The Key to Basics</a></li><li><a href="http://www.nhlbi.nih.gov/about/org/naepp/" content="http://www.nhlbi.nih.gov/about/org/naepp/" class="message_urls" target="_blank">National Asthma Education and Prevention Program</a></li><li><a href="http://www.lung.org" content="http://www.lung.org" class="message_urls" target="_blank">The American Lung Association </a></li><li><a href="https://www.schools.nyc.gov/docs/default-source/default-document-library/asthma-medication-administration-form-english" content="https://www.schools.nyc.gov/docs/default-source/default-document-library/asthma-medication-administration-form-english" class="message_urls" target="_blank">Asthma Medication Administration Form (AMAF) School Year 2018-19</a></li></ul>
+                                                                                                                                    
+                                                </div>
+                                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-8">
+                                    <div class="card mb-2">
+                                            <div class="card-header bg-light">
+                                             
+                                                <i class="fas fa-tools"></i>&nbsp;Data tools</div>
+                                                
+                                                <div class="card-body">
+                                                        <ul>
+                                                            <li>How calculated</li>
+                                                            <li>Data source</li>
+                                                            <li>Download data</li>
+
+                                                        </ul>
+                                                                                                                                    
+                                                </div>
+                                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-8">
+                                    <div class="card mb-2">
+                                            <div class="card-header bg-light">
+                                             
+                                                <i class="fas fa-paperclip"></i>&nbsp; Related data</div>
+                                                
+                                                <div class="card-body" style="height: 200px; overflow: scroll; overflow-x:hidden;">
+                                                    Related data from the Health Department:
+                                                        <ul>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                            <li>Data link</li>
+                                                        </ul>
+                                                                                                                                    
+                                                </div>
+                                                </div>
+                            </div>
+
+                        </div>
+
+
+                            
+
+                                    
+
+                </div>
+                <!--end primary window-->
+           
+
+            </div>
+
+       <br><br>
+
+<!--this script supports the modal-->
+<div id="theModal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      </div>
+    </div>
+  </div>
+
+
+        
+    </main>
+
+    <footer class="bg-black" id="global-footer" role="contentinfo">
+
+        <h2 class="sr-only">
+            Page Footer
+        </h2>
+
+        <div class="bg-opacity-black-25 text-white" id="nyc-footer">
+
+            <div class="container py-3 d-none" id="languages">
+
+                <div class="row fs-md">
+
+                    <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
+                        <ul class="extensible-list">
+                            <li><a class="lang-select text-reset" href="#" data-lang="ar">عربى</a></li>
+                            <li><a class="lang-select text-reset" href="#" data-lang="bn">বাঙালি</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
+                        <ul class="extensible-list">
+                            <li><a class="lang-select text-reset" href="#" data-lang="zh-CN">中文</a></li>
+                            <li><a class="lang-select text-reset" href="#" data-lang="fr">français</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
+                        <ul class="extensible-list">
+                            <li><a class="lang-select text-reset" href="#" data-lang="ht">Kreyòl Ayisyen</a></li>
+                            <li><a class="lang-select text-reset" href="#" data-lang="ko">한국어</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
+                        <ul class="extensible-list">
+                            <li><a class="lang-select text-reset" href="#" data-lang="pl">Polskie</a></li>
+                            <li><a class="lang-select text-reset" href="#" data-lang="ru">русский</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg">
+                        <ul class="extensible-list">
+                            <li><a class="lang-select text-reset" href="#" data-lang="es">Español</a></li>
+                            <li><a class="lang-select text-reset" href="#" data-lang="ur">اردو</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- #languages -->
+
+            <div class="container py-3" id="languages">
+
+                <ul class="fs-md" role="list">
+                    <li><a class="lang-select text-reset" href="#" data-lang="ar">عربى</a></li>
+                    <li><a class="lang-select text-reset" href="#" data-lang="bn">বাঙালি</a></li>
+                    <li><a class="lang-select text-reset" href="#" data-lang="zh-CN">中文</a></li>
+                    <li><a class="lang-select text-reset" href="#" data-lang="fr">français</a></li>
+                    <li><a class="lang-select text-reset" href="#" data-lang="ht">Kreyòl Ayisyen</a></li>
+                    <li><a class="lang-select text-reset" href="#" data-lang="ko">한국어</a></li>
+                    <li><a class="lang-select text-reset" href="#" data-lang="pl">Polskie</a></li>
+                    <li><a class="lang-select text-reset" href="#" data-lang="ru">русский</a></li>
+                    <li><a class="lang-select text-reset" href="#" data-lang="es">Español</a></li>
+                    <li><a class="lang-select text-reset" href="#" data-lang="ur">اردو</a></li>
+                </ul>
+
+            </div>
+            <!-- #languages -->
+
+            <hr class="opacity-10" aria-hidden="true">
+
+            <div class="container py-3">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-8 mb-3 mb-lg-0">
+
+                        <nav class="row fs-md" role="navigation">
+
+                            <div class="col-lg mb-3 mb-lg-0">
+
+                                <ul class="extensible-list">
+                                    <li>
+                                        <a class="text-reset" href="http://www1.nyc.gov/nyc-resources/agencies.page">
+                                            <strong>City Agencies</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-reset" href="https://a858-nycnotify.nyc.gov/notifynyc/">
+                                            <strong>Notify NYC</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-reset"
+                                            href="http://www1.nyc.gov/connect/mobile-applications.page">
+                                            <strong>NYC Mobile Apps</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- .col -->
+
+                            <div class="col-lg mb-3 mb-lg-0">
+
+                                <ul class="extensible-list">
+                                    <li>
+                                        <a class="text-reset" href="http://www1.nyc.gov/home/contact-us.page">
+                                            <strong>Contact NYC Government</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-reset" href="https://a856-citystore.nyc.gov/">
+                                            <strong>CityStore</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-reset" href="http://maps.nyc.gov/doitt/nycitymap/">
+                                            <strong>Maps</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- .col -->
+
+                            <div class="col-lg mb-3 mb-lg-0">
+
+                                <ul class="extensible-list">
+                                    <li>
+                                        <a class="text-reset"
+                                            href="https://a127-ess.nyc.gov/psp/prdess/?cmd=login&languageCd=ENG&">
+                                            <strong>City Employees</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-reset" href="http://www1.nyc.gov/connect/social-media.page">
+                                            <strong>Stay Connected</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-reset"
+                                            href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page">
+                                            <strong>Resident Toolkit</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- .col -->
+
+                        </nav>
+
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <a class="mb-2" href="https://www1.nyc.gov" title="Go to nyc.gov" target="_blank">
+                            <img class="mb-2" src="./images/nyc-bubble-logo.svg" width="90" alt="NYC Logo">
+                        </a>
+                        <p class="fs-sm">City of New York - 2019 All Rights Reserved. NYC is a trademark and service
+                            mark of the City of New York.</p>
+
+                        <ul class="extensible-list horizontal fs-sm">
+                            <li>
+                                <a class="text-reset" href="http://www1.nyc.gov/home/privacy-policy.page">Privacy
+                                    Policy</a>
+                            </li>
+                            <li>
+                                <a class="text-reset" href="http://www1.nyc.gov/home/terms-of-use.page">Terms
+                                    of Use</a>
+                            </li>
+                            <li>
+                                <a class="text-reset" href="http://www1.nyc.gov/site/mopd/index.page"
+                                    title="Mayor's Office for People with Disabilities">
+                                    <span class="sr-only">Mayor's Office for People with Disabilities</span>
+                                    <span class="fab fa-lg fa-accessible-icon"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- .col -->
+
+                </div>
+                <!-- .row -->
+
+            </div>
+            <!-- .container -->
+
+        </div>
+        <!-- #nyc-bottom-footer -->
+
+    </footer>
+
+    <!-- jQuery (full, compressed version) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Popper.js and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Google Translate -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
+    <script src="https://nycehs.github.io/Portal-Core-Repo/js/main.js"></script>
+
+
+
+</body>
+
+</html>

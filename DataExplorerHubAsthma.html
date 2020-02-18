@@ -21,7 +21,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
     <!-- Corrects IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Data Stories: EH Data Portal</title>
+    <title>Asthma: EH Data Portal</title>
 
     <!--Fontawesome Icons-->
     <link rel="stylesheet" href="https://nycehs.github.io/Portal-Core-Repo/fontawesome/css/all.min.css">
@@ -184,7 +184,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                     <li><a href="DataExplorerHub.html#food">Food</a></li>
                                     <li><a href="DataExplorerHub.html#pests">Pests</a></li>
                                     <hr>
-                                    <li><a href="DataExplorerHub.html#special">Special populations</a></li>
+                                    <li><a href="DataExplorerHub.html#special">Social/economic conditions</a></li>
                                     <li><a href="DataExplorerHub.html#child">Child health</a></li>
                                     <li><a href="DataExplorerHub.html#all">All health outcomes</a></li>
                                 </ul>
@@ -305,7 +305,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                 <strong><i class="fas fa-chart-line"></i>&nbsp;Choose indicator to display:</strong> 
                         </div>
 
-                        <div class="col-lg-8 col-sm-8 mb-2 ">
+                        <div class="col-lg-8 col-sm-12 mb-2 ">
 
                                 <div class="dropdown mb-2">
                                     <button type="button" class="btn btn-md btn-outline-success dropdown-toggle btn-block" id="indicatordropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Asthma emergency department visits</button> 	
@@ -321,7 +321,7 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                     <hr>
                                     In this page, the "Refine Data" item to the right can control indicator-wide characteristics (like age or geography), and the chart-specific ones (currently using one modal) can control chart-specific options - like y-axis for the scatterplot.                                        
                         </div>
-                        <div class="col-lg-4 col-sm-4">
+                        <div class="col-lg-4 col-sm-12">
                                 
                                         <button type="button" class="btn btn-block btn-outline-success dropdown-toggle" data-toggle="collapse" data-target="#refineShow" aria-controls="refineShow">
                                             <span><i class="fas fa-cog"></i>&nbsp;Refine</span>
@@ -361,79 +361,48 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                         </div>
                                   
                                     
-                        </div>
-
-
-
-                        <!-- Refine Modal -->
-                            <div class="modal fade" id="refineModal" tabindex="-1" role="dialog" aria-labelledby="refineModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Refine chart</h5>
-                                    </div>
-                                    <div class="modal-body">
-                                            <div class="row mb-2">
-                                             <div class="col">
-                                                    <div class="dropdown">
-                                                            <a class="btn btn-outline-success dropdown-toggle btn-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                              Year
-                                                            </a>
-                                                          
-                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                              <a class="dropdown-item" href="#">2019</a>
-                                                              <a class="dropdown-item" href="#">2018</a>
-                                                              <a class="dropdown-item" href="#">2017</a>
-                                                            </div>
-                                                          </div>
-                                             </div>
-
-                                             </div>
-
-                                            <b>Measure:&nbsp;&nbsp;&nbsp;</b>
-                                            <div class="row no-gutters mb-2">
-                                            <div class="col-1">Rate</div>
-                                            <div class="col-1"><div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                                     <label class="custom-control-label" for="customSwitch1"></label>
-                                                  </div> </div>
-                                            <div class="col-1">Count</div>
-                                        </div>
-
-                                                  <b>Geography</b>
-                                                  <div class="row mb-2">
-                                                      <div class="col">
-                                                            <div class="form-check form-check-inline">
-                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                                    <label class="form-check-label" for="inlineRadio1">Community district</label>
-                                                                  </div>
-                                                                  <div class="form-check form-check-inline">
-                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                                    <label class="form-check-label" for="inlineRadio2">NTA</label>
-                                                                  </div> 
-                                                      </div>
-                                                  </div>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        
+                        </div>                        
                     </div>
 
 
 <!--start the data display-->
 
-                        <div class="row my-4">
+                        <div class="row">
+                            <div class="col">
+                                <h4><i class="fas fa-chart-bar"></i>&nbsp;Summary</h4>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2 mb-4">
                             <div class="col-lg-8 col-sm-12">
+
                                     <div class="card">
                                         <div class="card-header bg-light">
-                                                <div class="float-right"><a href="#" data-toggle="modal" data-target="#refineModal" aria-controls="refineModal"><i class="fas fa-cog"></i></a></div>
-                                                <i class="fas fa-chart-bar"></i>&nbsp;Summary</div>
+                                                <div class="float right">
+                                                        <div class="dropdown">
+                                                                <button class="btn btn-sm float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select years
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                  <a class="dropdown-item" href="#">Select all</a>
+                                                                  <a class="dropdown-item" href="#">2016</a>
+                                                                  <a class="dropdown-item" href="#">2015</a>
+                                                                </div>
+                                                              </div>
+
+                                                              <div class="dropdown">
+                                                                    <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select geography
+                                                                    </button>
+                                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                                      <a class="dropdown-item" href="#">Select all</a>
+                                                                      <a class="dropdown-item" href="#">City</a>
+                                                                      <a class="dropdown-item" href="#">Borough</a>
+                                                                      <a class="dropdown-item" href="#">Neighborhood</a>
+                                                                    </div>
+                                                                  </div>
+                                                </div>
+ 
+
+                                                </div>
                                             <div class="card-body">
                                             
                                                 
@@ -458,13 +427,48 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                         </div>
 
 
-
-                        <div class="row my-4">
+                        <div class="row">
+                                <div class="col">
+                                    <h4><i class="fas fa-map-marker-alt"></i>&nbsp;Map</h4>
+                                </div>
+                            </div>
+                        <div class="row mt-2 mb-4">
                             <div class="col-lg-8 col-sm-12">
                                     <div class="card">
                                             <div class="card-header bg-light">
-                                                    <div class="float-right"><a href="#" data-toggle="modal" data-target="#refineModal" aria-controls="refineModal"><i class="fas fa-cog"></i></a></div>
-                                                    <i class="fas fa-map-marker-alt"></i>&nbsp;Map</div>
+                                                    <div class="float right">
+                                                            <div class="dropdown">
+                                                                    <button class="btn btn-sm float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Year
+                                                                    </button>
+                                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                                                      <a class="dropdown-item" href="#">Select all</a>
+                                                                      <a class="dropdown-item" href="#">2016</a>
+                                                                      <a class="dropdown-item" href="#">2015</a>
+                                                                    </div>
+                                                                  </div>
+    
+                                                                  <div class="dropdown">
+                                                                        <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Geography
+                                                                        </button>
+                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                                                                          <a class="dropdown-item" href="#">Select all</a>
+                                                                          <a class="dropdown-item" href="#">City</a>
+                                                                          <a class="dropdown-item" href="#">Borough</a>
+                                                                          <a class="dropdown-item" href="#">Neighborhood</a>
+                                                                        </div>
+                                                                      </div>
+
+                                                                      <div class="dropdown">
+                                                                            <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Measure
+                                                                            </button>
+                                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
+                                                                              <a class="dropdown-item" href="#">Age-adjusted rate</a>
+                                                                              <a class="dropdown-item" href="#">Rate</a>
+                                                                              <a class="dropdown-item" href="#">Number</a>
+                                                                            </div>
+                                                                          </div>
+                                                    </div>
+                                            </div>
 
                                             <div class="card-body">                                       
                                                 <iframe title="" aria-label="USA new york city neighborhoods (ntas) choropleth map" id="datawrapper-chart-52c6Y" src="https://datawrapper.dwcdn.net/52c6Y/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
@@ -480,12 +484,33 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                         </div>
 
 
-                        <div class="row my-4">
+                        <div class="row">
+                                <div class="col">
+                                    <h4> <i class="fas fa-chart-line"></i>&nbsp;Trend</h4>
+                                </div>
+                            </div>
+                        <div class="row mt-2 mb-4">
                             <div class="col-lg-8 col-sm-12">
                                     <div class="card">
                                             <div class="card-header bg-light">
-                                                    <div class="float-right"><a href="#" data-toggle="modal" data-target="#refineModal" aria-controls="refineModal"><i class="fas fa-cog"></i></a></div>
-                                                    <i class="fas fa-chart-line"></i>&nbsp;Trend</div>
+                                                    <div class="dropdown">
+                                                            <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Refine
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
+                                                              <a class="dropdown-item" href="#">Borough</a>
+                                                              <a class="dropdown-item" href="#">Age</a>
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="dropdown">
+                                                                <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Measure
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
+                                                                  <a class="dropdown-item" href="#">Age-adjusted rate</a>
+                                                                  <a class="dropdown-item" href="#">Rate</a>
+                                                                </div>
+                                                              </div>
+                                            </div>
 
                                             <div class="card-body">
                                                 <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-0JdfH" src="https://datawrapper.dwcdn.net/0JdfH/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
@@ -501,12 +526,21 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                         </div>
 
 
-                        <div class="row my-4">
+                        <div class="row">
+                                <div class="col">
+                                    <h4>  <i class="fas fa-exclamation-circle"></i>&nbsp;Disparities</h4>
+                                </div>
+                            </div>
+                        <div class="row mt-2 mb-4">
                                 <div class="col-lg-8 col-sm-12">
                                         <div class="card">
                                                 <div class="card-header bg-light">
-                                                        <div class="float-right"><a href="#" data-toggle="modal" data-target="#refineModal" aria-controls="refineModal"><i class="fas fa-cog"></i></a></div>
-                                                        <i class="fas fa-exclamation-circle"></i>&nbsp;Disparities</div>
+                                                        <div class="dropdown">
+                                                                <button class="btn btn-sm mr-1 float-right btn-outline-success" type="button" disabled>Refine
+                                                                </button>
+                                                </div>
+                                                                
+                                                </div>
                                                 <div class="card-body">
 
                                                     <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-80S2v" src="https://datawrapper.dwcdn.net/80S2v/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
@@ -520,13 +554,37 @@ It removes lateral browsing from the page display (hub to hub), leaving it to th
                                     </div>
                         </div>
 
-
-                        <div class="row my-4">
+                        <div class="row">
+                                <div class="col">
+                                    <h4><i class="fas fa-link"></i>&nbsp;Connections</h4>
+                                </div>
+                            </div>
+                        <div class="row mt-2 mb-4">
                                     <div class="col-lg-8 col-sm-12">
                                             <div class="card">
                                                 <div class="card-header bg-light">
-                                                        <div class="float-right"><a href="#" data-toggle="modal" data-target="#refineModal" aria-controls="refineModal"><i class="fas fa-cog"></i></a></div>
-                                                    <i class="fas fa-link"></i>&nbsp;Connections</div>
+                                                        <div class="float-right">
+                                                                <div class="dropdown">
+                                                                        <button class="btn btn-sm mr-1 float-right btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connect to:
+                                                                        </button>
+                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton8">
+                                                                          <a class="dropdown-item" href="#">Sulfur dioxide</a>
+                                                                          <a class="dropdown-item" href="#">Ozone</a>
+                                                                          <a class="dropdown-item" href="#">Nitrogen dioxide</a>
+                                                                          <a class="dropdown-item" href="#">Fine particulate matter</a>
+                                                                          <a class="dropdown-item" href="#">Black carbon</a>
+                                                                          <hr>
+                                                                          <a class="dropdown-item" href="#">Cigarette smoking (adults)</a>
+                                                                          <a class="dropdown-item" href="#">No smoke-free home policy</a>
+                                                                          <a class="dropdown-item" href="#">Secondhand smoke</a>
+                                                                          <hr>
+                                                                          <a class="dropdown-item" href="#">Cockroaches</a>
+
+                                                                        </div>
+                                                                      </div>
+                                                        </div>
+                                                    </div>
+
                                                     <div class="card-body">
 
                                                         <iframe title="" aria-label="Scatter Plot" id="datawrapper-chart-CL80B" src="https://datawrapper.dwcdn.net/CL80B/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="409"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>

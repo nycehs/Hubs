@@ -206,16 +206,16 @@ This tests an integrated hub page, now with deep linking
         <!-- Toggle #sidebar-nav on mobile -->
             <div class="container d-lg-none">
 
-                <div class="narrow">
 
-                    <div class="btn-toggle narrow mb-2">
+
+                    <div class="btn-toggle mb-2">
                         <button class="btn btn-block btn-md btn-light" data-toggle="collapse"
                             data-target="#sidebar-nav" aria-expanded="false" aria-controls="sidebar-nav">
                             <span class="title">Change topic</span>
                         </button>
                     </div>
 
-                </div>
+
 
             </div>
 
@@ -234,21 +234,21 @@ This tests an integrated hub page, now with deep linking
                    
                     <a class="nav-link tab-link" id="climate-tab" data-toggle="pill" href="#climate" role="tab" aria-controls="climate" aria-selected="false">Climate</a>
                    
-                    <a class="nav-link tab-link" id="transportation-tab" data-toggle="pill" href="#transportation" role="tab" aria-controls="transportation" aria-selected="false">Transportation</a>
+                    <a class="nav-link tab-link" id="transportation-tab" data-toggle="pill" href="#transportation" role="tab" aria-controls="transportation" aria-selected="false">Transportation & active design</a>
 
-                    <a class="nav-link tab-link" id="food-tab" data-toggle="pill" href="#food" role="tab" aria-controls="food" aria-selected="true">Food</a>
+                    <a class="nav-link tab-link" id="food-tab" data-toggle="pill" href="#food" role="tab" aria-controls="food" aria-selected="true">Food & drink</a>
                    
-                    <a class="nav-link tab-link" id="pests-tab" data-toggle="pill" href="#pests" role="tab" aria-controls="pests" aria-selected="false">Pests</a>
+                    <a class="nav-link tab-link" id="pests-tab" data-toggle="pill" href="#pests" role="tab" aria-controls="pests" aria-selected="false">Pests & pesticides</a>
 
                     <hr>
                    
-                    <a class="nav-link tab-link" id="special-tab" data-toggle="pill" href="#special" role="tab" aria-controls="special" aria-selected="false">Special populations</a>
+                    <a class="nav-link tab-link" id="special-tab" data-toggle="pill" href="#special" role="tab" aria-controls="special" aria-selected="false">Social/economic conditions</a>
                    
                     <a class="nav-link tab-link" id="child-tab" data-toggle="pill" href="#child" role="tab" aria-controls="child" aria-selected="false">Child health</a>
 
-                    <a class="nav-link tab-link" id="all-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all" aria-selected="false">All health outcomes</a>
-                    <div class="border-bottom mb-2"></div>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Search topics">
+                    <hr>
+
+                    <a class="nav-link tab-link" id="all-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all" aria-selected="false"><i class="fas fa-search"></i>&nbsp; Search all</a>
                     <br>
                 </div>
                   </div>
@@ -408,7 +408,7 @@ This tests an integrated hub page, now with deep linking
                                       <div class="card mb-2">
                                           <div class="card-header bg-light"><i class="fas fa-chart-bar"></i>&nbsp;Environmental factors</div>
                                           <ul class="list-group list-group-flush">
-                                              <li class="list-group-item"><a href="">Housing maintenance</a>
+                                              <li class="list-group-item"><a href="DataExplorerHubHousingMaint.html">Housing maintenance</a>
                                               <li class="list-group-item"><a href="">Housing safety</a>
                                               <li class="list-group-item"><a href="">Housing characteristics</a>
                                               <li class="list-group-item"><a href="">Lead hazads</a>
@@ -854,8 +854,8 @@ This tests an integrated hub page, now with deep linking
                     <div class="tab-pane fade" id="special" role="tabpanel" aria-labelledby="special-tab">
                         <div class="row">
                         <div class="col">
-                                <h3>Special populations</h3>
-                                <p>In public health, some populations may be more vulnerable to certain outcomes. Social and economic conditions affect people’s health. These conditions (also called “social determinants of health”) are conditions that people may be born into or fall into over the course of their lives. They are shaped by local, national and global distribution of resources and power. </p>
+                                <h3>Social and economic conditions</h3>
+                                <p>Social and economic conditions affect people’s health. These conditions (also called “social determinants of health”) are conditions that people may be born into or fall into over the course of their lives. They are shaped by local, national and global distribution of resources and power. </p>
                                 <p>People tend to be healthier when they have access to economic and financial stability, higher education, adequate health care, healthy neighborhoods, and safe, strong communities.</p>
                                 <p>But when people don’t have access to these conditions, they experience worse health outcomes. This is health inequity – avoidable and unfair health outcomes. Discrimination based on race (and other personal characteristics) often results in disparities in access to these conditions –and thus, disparities in health outcomes.</p>
                         </div></div>
@@ -868,55 +868,49 @@ This tests an integrated hub page, now with deep linking
                             <div class="row mt-2">
                                 <div class="col-lg-4 col-xs-12">
                                   <div class="card mb-2">
-                                      <div class="card-header bg-light"><i class="fas fa-chart-bar"></i>&nbsp;People</div>
+                                      <div class="card-header bg-light"><i class="fas fa-chart-bar"></i>&nbsp;Social/economic conditions</div>
                                       <ul class="list-group list-group-flush">
-                                            <li class="list-group-item"><a href="">Foreign born</a>
-                                                <li class="list-group-item"><a href="">Limited English proficiency</a>
-                                            <li class="list-group-item"><a href="">Race and ethnicity</a>
-                                            <li class="list-group-item"><a href="">Older adults living alone</a>
-                                            <li class="list-group-item"><a href="">Adults with independent living difficulty</a>
-                                            <li class="list-group-item"><a href="">NYC agency pesticide use</a>
+                                            <li class="list-group-item"><a href="">Neighborhood environments</a>
+                                                <li class="list-group-item"><a href="">Health care</a>
+                                            <li class="list-group-item"><a href="">Poverty</a>
+                                            <li class="list-group-item"><a href="">Housing characteristics</a>
+                                            <li class="list-group-item"><a href="">Education and employment</a>
+
                                 
                                         </ul>
                               
                                       </div>
-    
-                                </div>
-    
-                                <div class="col-lg-4 col-xs-12">
-                                  <div class="card mb-2">
-                                      <div class="card-header bg-light"><i class="fas fa-chart-bar"></i>&nbsp;Income and education </div>
-                                      <ul class="list-group list-group-flush">
-                                            <li class="list-group-item"><a href="">Unemployment</a>
-                                            <li class="list-group-item"><a href="">High school graduation</a>
-                                            <li class="list-group-item"><a href="">Children under 5 in poverty</a>
-                                            <li class="list-group-item"><a href="">School absenteeism</a>
-                                            </ul>
-                                  
-                                      </div>
 
-                                      <div class="card mb-2">
-                                            <div class="card-header bg-light"><i class="fas fa-chart-bar"></i>&nbsp;Safety and policing </div>
-                                            <ul class="list-group list-group-flush">
-                                                  <li class="list-group-item"><a href="">Neighborhood safety</a>
-                                                  <li class="list-group-item"><a href="">Incarceration</a>
-                                                  </ul>
-                                        
-                                            </div>
+
     
                                 </div>
     
                                 <div class="col-lg-4 col-xs-12">
-                                      <div class="card mb-2">
-                                              <div class="card-header bg-light"><i class="fas fa-chart-bar"></i>&nbsp;Housing </div>
-                                              <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item"><a href="">Rent burden</a>
-                                                    <li class="list-group-item"><a href="">Unhealthy food access</a>
-                                                        <li class="list-group-item"><a href="">Owner-occupied homes</a>
-                                                            <li class="list-group-item"><a href="">Crowding (1+ person per room)</a>
-                                                            <li class="list-group-item"><a href="">Court-ordered evictions</a>
-                                                    </ul>
-                                              </div>
+                                    <div class="card mb-2">
+                                        <div class="card-header bg-light"><i class="fas fa-chart-bar"></i>&nbsp;Special populations</div>
+                                        <ul class="list-group list-group-flush">
+                                              <li class="list-group-item"><a href="">Foreign born</a>
+                                                  <li class="list-group-item"><a href="">Limited English proficiency</a>
+                                              <li class="list-group-item"><a href="">Race and ethnicity</a>
+                                              <li class="list-group-item"><a href="">Older adults living alone</a>
+                                              <li class="list-group-item"><a href="">Adults with independent living difficulty</a>
+                                 
+                                          </ul>
+                                
+                                        </div>
+                                </div>
+    
+                                <div class="col-lg-4 col-xs-12">
+                                    <div class="card mb-2">
+                                        <div class="card-header bg-light"><i class="fas fa-chart-bar"></i>&nbsp;Related topics</div>
+                                        <ul class="list-group list-group-flush">
+                                              <li class="list-group-item"><a href="">Link</a>
+                                                  <li class="list-group-item"><a href="">Link</a>
+
+                                  
+                                          </ul>
+                                
+                                        </div>
     
     
                                 </div>
@@ -924,9 +918,115 @@ This tests an integrated hub page, now with deep linking
                               </div>
                     </div>
                     
-                    <div class="tab-pane fade" id="child" role="tabpanel" aria-labelledby="child-tab">..child.</div>
+                    <div class="tab-pane fade" id="child" role="tabpanel" aria-labelledby="child-tab">
+                        <div class="row">
+                            <div class="col">
+                                <h3>Child health</h3>
+                                <p>Children are fragile and can be more harmed by environmental threats. Plus, lifelong health can be determined by one's health as a child.</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col mt-4">
+                                    <h4><i class="fas fa-chart-line"></i>&nbsp;Get the data</h4>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-lg-4 col-xs-12">
+                                <div class="card mb-2">
+                                    <div class="card-header bg-light"><i class="fas fa-chart-bar"></i>&nbsp;Health outcomes</div>
+                                    <ul class="list-group list-group-flush">
+                                          <li class="list-group-item"><a href="">Asthma</a>
+                                              <li class="list-group-item"><a href="">Birth defects</a>
+                                          <li class="list-group-item"><a href="">Birth outcomes</a>
+                                          <li class="list-group-item"><a href="">Cancers in children</a>
+                                          <li class="list-group-item"><a href="">Childhood lead exposure</a>
+                             
+                                      </ul>
+                            
+                                    </div>
+                            </div>
+
+                            <div class="col-lg-4 col-xs-12">
+                                <div class="card mb-2">
+                                    <div class="card-header bg-light"><i class="fas fa-link"></i>&nbsp;Related topics</div>
+                                    <ul class="list-group list-group-flush">
+                                          <li class="list-group-item"><a href="">Outdoor air</a>
+                                              <li class="list-group-item"><a href="">Housing</a>
+                                          <li class="list-group-item"><a href="">Social and economic conditions</a>                             
+                                      </ul>
+                            
+                                    </div>
+                            </div>
+                        </div>
+
+
+                    </div>
                     
-                    <div class="tab-pane fade" id="all" role="tabpanel" aria-labelledby="all-tab">..all HOs.</div>  
+                    <div class="tab-pane fade" id="all" role="tabpanel" aria-labelledby="all-tab">
+                        <div class="row">
+                            <div class="col mb-2"><h3>Search all data</h3></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search" aria-selected="true">Search indicators</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="alltopics-tab" data-toggle="tab" href="#alltopics" role="tab" aria-controls="alltopics" aria-selected="false">All topics A-Z</a>
+                                    </li>
+                                  </ul>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="search" role="tabpanel" aria-labelledby="search-tab">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-12">
+                                                    <form>
+                                                            <div class="form-group">
+                                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search data by keyword (e.g., asthma)">
+                                                              </div>
+                                                        </form>
+
+                                                <div class="border" style="height:350px;">
+                                                Search results
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="alltopics" role="tabpanel" aria-labelledby="alltopics-tab">
+                                        <ul>
+                                            <li>...</li>
+                                            <li>...</li>
+                                            <li>...</li>
+                                            <li>...</li>
+                                            <li>...</li>
+                                            <li>...</li>
+                                            <li>...</li>
+                                        </ul>
+                                    </div>
+                                  
+                                  </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                    </div>  
                 </div>
                 </div>
               </div>
